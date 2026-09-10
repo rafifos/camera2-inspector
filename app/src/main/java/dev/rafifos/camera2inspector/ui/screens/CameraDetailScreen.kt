@@ -21,10 +21,11 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MediumFlexibleTopAppBar
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -34,7 +35,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import dev.rafifos.camera2inspector.R
 import dev.rafifos.camera2inspector.camera.CameraReport
@@ -71,26 +74,25 @@ fun CameraDetailScreen(
             KeyQuery(text = query, category = category, namespace = namespace, vendorOnly = vendorOnly),
         )
     }
+    val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
 
     LaunchedEffect(category) { namespace = null }
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = {
-            TopAppBar(
-                title = {
-                    Column {
-                        Text(stringResource(R.string.camera_id, camera.id))
-                        Text(
-                            text = stringResource(
-                                R.string.camera_detail_subtitle,
-                                camera.lensFacing,
-                                camera.hardwareLevel,
-                            ),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                    }
+            MediumFlexibleTopAppBar(
+                title = { Text(stringResource(R.string.camera_id, camera.id)) },
+                subtitle = {
+                    Text(
+                        text = stringResource(
+                            R.string.camera_detail_subtitle,
+                            camera.lensFacing,
+                            camera.hardwareLevel,
+                        ),
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
                 },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
@@ -100,14 +102,18 @@ fun CameraDetailScreen(
                         )
                     }
                 },
+                scrollBehavior = scrollBehavior,
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface,
+                    scrolledContainerColor = MaterialTheme.colorScheme.surfaceContainer,
                 ),
             )
         },
     ) { innerPadding ->
         LazyColumn(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .nestedScroll(scrollBehavior.nestedScrollConnection),
             contentPadding = PaddingValues(
                 start = 16.dp,
                 end = 16.dp,
@@ -136,6 +142,8 @@ fun CameraDetailScreen(
                         }
                     },
                     singleLine = true,
+                    shape = OutlinedTextFieldDefaults.roundedShape,
+                    colors = OutlinedTextFieldDefaults.tonalColors(),
                 )
             }
 
@@ -232,7 +240,7 @@ private fun CameraOverviewCard(camera: CameraReport) {
         ) {
             Text(
                 text = stringResource(R.string.overview_title),
-                style = MaterialTheme.typography.titleMedium,
+                style = MaterialTheme.typography.titleMediumEmphasized,
             )
             OverviewLine(
                 stringResource(R.string.overview_logical_multi_camera),
