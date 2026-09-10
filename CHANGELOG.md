@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/rafifos/camera2-inspector/compare/v1.0.0...v1.1.0) (2026-09-10)
+
+
+### Features
+
+* **sniffer:** add JSON, CSV and Markdown reports ([0332b89](https://github.com/rafifos/camera2-inspector/commit/0332b8908d59691991341b43f1a7e4f20a901d81))
+* **sniffer:** add session and frame comparison ([458b281](https://github.com/rafifos/camera2-inspector/commit/458b281d2c1674e588c4a5e55266c210f785d973))
+* **sniffer:** add session models and metadata extraction ([7c0cf36](https://github.com/rafifos/camera2-inspector/commit/7c0cf36a02f76bfd7f86eca0f62e8e5c2692e983))
+* **sniffer:** add vendor tag id resolution ([e790af7](https://github.com/rafifos/camera2-inspector/commit/e790af7d74a5513a5acee0546ee93b7e5ff25526))
+* **sniffer:** record sessions with a camera monitor ([54e3737](https://github.com/rafifos/camera2-inspector/commit/54e3737493da32a6a7351d03790f1b6854984412))
+* **ui:** add the session monitor screen ([8cdcf1f](https://github.com/rafifos/camera2-inspector/commit/8cdcf1f005515211d3d0e4b24ed3c5dddfe0adb0))
+
 ## 1.0.0 (2026-09-10)
 
 
