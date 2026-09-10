@@ -1,5 +1,11 @@
 package dev.rafifos.camera2inspector.ui.screens
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -15,15 +21,17 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ContainedLoadingIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExtendedFloatingActionButton
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.LargeTopAppBar
-import androidx.compose.material3.LinearWavyProgressIndicator
+import androidx.compose.material3.LargeFlexibleTopAppBar
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MediumExtendedFloatingActionButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -33,8 +41,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import dev.rafifos.camera2inspector.R
 import dev.rafifos.camera2inspector.camera.DeviceReport
@@ -44,7 +55,7 @@ import dev.rafifos.camera2inspector.ui.InspectorUiState
 import dev.rafifos.camera2inspector.ui.components.CameraCard
 import dev.rafifos.camera2inspector.ui.components.SummaryCard
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 fun HomeScreen(
     state: InspectorUiState,
@@ -54,6 +65,8 @@ fun HomeScreen(
     onCameraClick: (String) -> Unit,
 ) {
     val snackbarHostState = remember { SnackbarHostState() }
+    val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
+    val motionScheme = MaterialTheme.motionScheme
     LaunchedEffect(state.exportMessage) {
         state.exportMessage?.let { message ->
             snackbarHostState.showSnackbar(message)
@@ -66,17 +79,15 @@ fun HomeScreen(
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = {
-            LargeTopAppBar(
-                title = {
-                    Column {
-                        Text(stringResource(R.string.app_name))
-                        Text(
-                            text = report?.device?.let { "${it.manufacturer} ${it.model}".trim() }
-                                ?: stringResource(R.string.home_subtitle_fallback),
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                    }
+            LargeFlexibleTopAppBar(
+                title = { Text(stringResource(R.string.app_name)) },
+                subtitle = {
+                    Text(
+                        text = report?.device?.let { "${it.manufacturer} ${it.model}".trim() }
+                            ?: stringResource(R.string.home_subtitle_fallback),
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
                 },
                 actions = {
                     if (report != null && !state.isScanning) {
@@ -88,14 +99,26 @@ fun HomeScreen(
                         }
                     }
                 },
+                scrollBehavior = scrollBehavior,
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface,
+                    scrolledContainerColor = MaterialTheme.colorScheme.surfaceContainer,
                 ),
             )
         },
         floatingActionButton = {
-            if (report != null && !state.isScanning) {
-                ExtendedFloatingActionButton(
+            AnimatedVisibility(
+                visible = report != null && !state.isScanning,
+                enter = scaleIn(
+                    animationSpec = motionScheme.defaultSpatialSpec<Float>(),
+                    initialScale = 0.8f,
+                ) + fadeIn(animationSpec = motionScheme.defaultEffectsSpec<Float>()),
+                exit = scaleOut(
+                    animationSpec = motionScheme.fastSpatialSpec<Float>(),
+                    targetScale = 0.8f,
+                ) + fadeOut(animationSpec = motionScheme.fastEffectsSpec<Float>()),
+            ) {
+                MediumExtendedFloatingActionButton(
                     onClick = onExport,
                     icon = { Icon(Icons.Default.Share, contentDescription = null) },
                     text = { Text(stringResource(R.string.export)) },
@@ -105,7 +128,9 @@ fun HomeScreen(
         snackbarHost = { SnackbarHost(snackbarHostState) },
     ) { innerPadding ->
         LazyColumn(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .nestedScroll(scrollBehavior.nestedScrollConnection),
             contentPadding = PaddingValues(
                 start = 16.dp,
                 end = 16.dp,
@@ -130,7 +155,7 @@ fun HomeScreen(
                 item(key = "cameras-header") {
                     Text(
                         text = stringResource(R.string.cameras_title, report.cameras.size),
-                        style = MaterialTheme.typography.titleMedium,
+                        style = MaterialTheme.typography.titleMediumEmphasized,
                     )
                 }
 
@@ -158,20 +183,24 @@ fun HomeScreen(
     }
 }
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun ScanningCard(statusMessage: String?) {
     Card {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
+                .animateContentSize(
+                    animationSpec = MaterialTheme.motionScheme.defaultSpatialSpec<IntSize>(),
+                )
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             Text(
                 text = stringResource(R.string.scan_title),
-                style = MaterialTheme.typography.titleMedium,
+                style = MaterialTheme.typography.titleMediumEmphasized,
             )
-            LinearWavyProgressIndicator(modifier = Modifier.fillMaxWidth())
+            ContainedLoadingIndicator()
             Text(
                 text = statusMessage ?: stringResource(R.string.scan_status_default),
                 style = MaterialTheme.typography.bodyMedium,
@@ -181,6 +210,7 @@ private fun ScanningCard(statusMessage: String?) {
     }
 }
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun ErrorCard(message: String, onRetry: () -> Unit) {
     Card(
@@ -197,14 +227,17 @@ private fun ErrorCard(message: String, onRetry: () -> Unit) {
         ) {
             Text(
                 text = stringResource(R.string.scan_failed_title),
-                style = MaterialTheme.typography.titleMedium,
+                style = MaterialTheme.typography.titleMediumEmphasized,
             )
             Text(message, style = MaterialTheme.typography.bodyMedium)
-            Button(onClick = onRetry) { Text(stringResource(R.string.scan_retry)) }
+            Button(onClick = onRetry, shapes = ButtonDefaults.shapes()) {
+                Text(stringResource(R.string.scan_retry))
+            }
         }
     }
 }
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun DeviceCard(device: DeviceReport) {
     Card {
@@ -216,7 +249,7 @@ private fun DeviceCard(device: DeviceReport) {
         ) {
             Text(
                 text = stringResource(R.string.device_title),
-                style = MaterialTheme.typography.titleMedium,
+                style = MaterialTheme.typography.titleMediumEmphasized,
             )
             DeviceLine(stringResource(R.string.field_manufacturer), device.manufacturer)
             DeviceLine(stringResource(R.string.field_model), device.model)
@@ -250,6 +283,7 @@ private fun DeviceLine(label: String, value: String, monospace: Boolean = false)
     }
 }
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun SummarySection(summary: ReportSummary?) {
     if (summary == null) return
@@ -257,7 +291,7 @@ private fun SummarySection(summary: ReportSummary?) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Text(
             text = stringResource(R.string.summary_title),
-            style = MaterialTheme.typography.titleMedium,
+            style = MaterialTheme.typography.titleMediumEmphasized,
         )
 
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -322,6 +356,7 @@ private fun SummarySection(summary: ReportSummary?) {
     }
 }
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun ReportErrorsCard(errors: List<SerializedError>) {
     val noMessage = stringResource(R.string.no_message)
@@ -334,7 +369,7 @@ private fun ReportErrorsCard(errors: List<SerializedError>) {
         ) {
             Text(
                 text = stringResource(R.string.report_errors_title),
-                style = MaterialTheme.typography.titleMedium,
+                style = MaterialTheme.typography.titleMediumEmphasized,
             )
             errors.forEach { error ->
                 Text(
