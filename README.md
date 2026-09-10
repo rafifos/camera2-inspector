@@ -146,9 +146,17 @@ locale, so reports from different devices remain comparable.
 
 ## User interface
 
-The UI uses Material 3 Expressive (`MaterialExpressiveTheme`, expressive motion, dynamic color on
-Android 12 and later, dark mode). It ships in English by default with a Brazilian Portuguese
-translation.
+The UI uses Material 3 Expressive and follows the M3 Expressive design guidance: the expressive
+motion scheme, dynamic color on Android 12 and later, a vibrant fallback scheme, emphasized
+typography and the expressive component set. It ships in English by default with a Brazilian
+Portuguese translation.
+
+The home screen uses a large flexible app bar with a subtitle and a medium extended FAB. While a
+scan runs, the card shows the shape-morphing contained loading indicator. Camera detail and key
+detail use medium flexible app bars with subtitles; the search field uses the expressive rounded,
+tonal text field style, and keys are rendered with expressive list items that morph their shape
+when pressed. Buttons in the app use the expressive pressed-shape behavior, and screen changes
+animate with the spatial and effects spring specs from the motion scheme.
 
 The home screen shows the device, the summary, the camera cards and the export button. Vendor
 CaptureRequest and Physical Request counts are highlighted when they are above zero. Tapping a
