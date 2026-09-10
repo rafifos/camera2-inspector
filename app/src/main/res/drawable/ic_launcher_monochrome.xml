@@ -8,28 +8,28 @@
     <path
         android:fillColor="#00000000"
         android:pathData="M34,44 L34,34 L44,34"
-        android:strokeColor="#FFBFDBFE"
+        android:strokeColor="#FFFFFFFF"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
         android:strokeWidth="5" />
     <path
         android:fillColor="#00000000"
         android:pathData="M64,34 L74,34 L74,44"
-        android:strokeColor="#FFBFDBFE"
+        android:strokeColor="#FFFFFFFF"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
         android:strokeWidth="5" />
     <path
         android:fillColor="#00000000"
         android:pathData="M74,64 L74,74 L64,74"
-        android:strokeColor="#FFBFDBFE"
+        android:strokeColor="#FFFFFFFF"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
         android:strokeWidth="5" />
     <path
         android:fillColor="#00000000"
         android:pathData="M44,74 L34,74 L34,64"
-        android:strokeColor="#FFBFDBFE"
+        android:strokeColor="#FFFFFFFF"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
         android:strokeWidth="5" />
@@ -43,6 +43,6 @@
 
     <!-- Focus dot -->
     <path
-        android:fillColor="#FF60A5FA"
+        android:fillColor="#FFFFFFFF"
         android:pathData="M49.5,54 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0" />
 </vector>
