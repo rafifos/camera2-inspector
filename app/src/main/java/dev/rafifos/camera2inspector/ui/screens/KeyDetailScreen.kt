@@ -14,24 +14,29 @@ import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MediumFlexibleTopAppBar
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import dev.rafifos.camera2inspector.R
 import dev.rafifos.camera2inspector.camera.CameraReport
@@ -52,12 +57,20 @@ fun KeyDetailScreen(
     val entry = remember(camera, category, keyName) {
         entriesForCategory(camera, category).firstOrNull { it.info.name == keyName }
     }
+    val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = {
-            TopAppBar(
+            MediumFlexibleTopAppBar(
                 title = { Text(stringResource(R.string.key_detail_title)) },
+                subtitle = {
+                    Text(
+                        text = category.label,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(
@@ -66,8 +79,10 @@ fun KeyDetailScreen(
                         )
                     }
                 },
+                scrollBehavior = scrollBehavior,
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface,
+                    scrolledContainerColor = MaterialTheme.colorScheme.surfaceContainer,
                 ),
             )
         },
@@ -91,16 +106,19 @@ fun KeyDetailScreen(
             camera = camera,
             category = category,
             entry = entry,
+            scrollBehavior = scrollBehavior,
             modifier = Modifier.padding(innerPadding),
         )
     }
 }
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun KeyDetailContent(
     camera: CameraReport,
     category: KeyCategory,
     entry: KeyEntry,
+    scrollBehavior: TopAppBarScrollBehavior,
     modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
@@ -108,10 +126,12 @@ private fun KeyDetailContent(
     val clipLabelKey = stringResource(R.string.clip_label_key)
     val clipLabelValue = stringResource(R.string.clip_label_value)
     val clipLabelTostring = stringResource(R.string.clip_label_tostring)
+    val buttonShapes = ButtonDefaults.shapes()
 
     Column(
         modifier = modifier
             .fillMaxSize()
+            .nestedScroll(scrollBehavior.nestedScrollConnection)
             .verticalScroll(rememberScrollState())
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -131,12 +151,12 @@ private fun KeyDetailContent(
                     )
                 }
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    OutlinedButton(onClick = {
-                        context.copyToClipboard(
-                            clipLabelKey,
-                            entry.info.name,
-                        )
-                    }) {
+                    OutlinedButton(
+                        onClick = {
+                            context.copyToClipboard(clipLabelKey, entry.info.name)
+                        },
+                        shapes = buttonShapes,
+                    ) {
                         Text(stringResource(R.string.copy_key_name))
                     }
                 }
@@ -152,7 +172,7 @@ private fun KeyDetailContent(
             ) {
                 Text(
                     text = stringResource(R.string.metadata_title),
-                    style = MaterialTheme.typography.titleMedium,
+                    style = MaterialTheme.typography.titleMediumEmphasized,
                 )
                 DetailLine(stringResource(R.string.field_type), entry.info.typeLabel)
                 DetailLine(stringResource(R.string.field_type_source), entry.info.typeSource)
@@ -186,7 +206,7 @@ private fun KeyDetailContent(
             ) {
                 Text(
                     text = stringResource(R.string.availability_title),
-                    style = MaterialTheme.typography.titleMedium,
+                    style = MaterialTheme.typography.titleMediumEmphasized,
                 )
                 Text(
                     text = availabilityNote(category),
@@ -219,7 +239,7 @@ private fun KeyDetailContent(
                 ) {
                     Text(
                         text = stringResource(R.string.error_title),
-                        style = MaterialTheme.typography.titleMedium,
+                        style = MaterialTheme.typography.titleMediumEmphasized,
                     )
                     DetailLine(stringResource(R.string.field_exception_type), error.type)
                     DetailLine(stringResource(R.string.field_message), error.message ?: noMessage)
@@ -237,7 +257,7 @@ private fun KeyDetailContent(
                 ) {
                     Text(
                         text = stringResource(R.string.value_title),
-                        style = MaterialTheme.typography.titleMedium,
+                        style = MaterialTheme.typography.titleMediumEmphasized,
                     )
                     val valueText = entry.valueText
                     if (valueText != null) {
@@ -253,12 +273,10 @@ private fun KeyDetailContent(
                                 fontFamily = FontFamily.Monospace,
                             )
                         }
-                        OutlinedButton(onClick = {
-                            context.copyToClipboard(
-                                clipLabelValue,
-                                valueText,
-                            )
-                        }) {
+                        OutlinedButton(
+                            onClick = { context.copyToClipboard(clipLabelValue, valueText) },
+                            shapes = buttonShapes,
+                        ) {
                             Text(stringResource(R.string.copy_value))
                         }
                     } else {
@@ -286,7 +304,7 @@ private fun KeyDetailContent(
                 ) {
                     Text(
                         text = stringResource(R.string.raw_tostring_title),
-                        style = MaterialTheme.typography.titleMedium,
+                        style = MaterialTheme.typography.titleMediumEmphasized,
                     )
                     SelectionContainer {
                         Text(
@@ -295,12 +313,10 @@ private fun KeyDetailContent(
                             fontFamily = FontFamily.Monospace,
                         )
                     }
-                    OutlinedButton(onClick = {
-                        context.copyToClipboard(
-                            clipLabelTostring,
-                            raw,
-                        )
-                    }) {
+                    OutlinedButton(
+                        onClick = { context.copyToClipboard(clipLabelTostring, raw) },
+                        shapes = buttonShapes,
+                    ) {
                         Text(stringResource(R.string.copy_tostring))
                     }
                 }
