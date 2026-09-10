@@ -184,6 +184,41 @@ responsive.
 ./gradlew :app:installDebug                # or: adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
+## Releases
+
+Releases are automated from conventional commits with
+[release-please](https://github.com/googleapis/release-please). The
+`.github/workflows/release.yml` workflow runs on every push to `main` and opens or updates a
+release pull request that bumps the version in `app/build.gradle.kts`, updates `CHANGELOG.md` and
+writes `version.txt`. Merging that pull request creates the `vX.Y.Z` tag and the GitHub release
+with the generated changelog.
+
+The same workflow then builds the APK from the release commit, runs the unit tests, and attaches
+the result to the release as `camera2-inspector-<tag>.apk`. The `versionCode` is derived from the
+version name, so both move together.
+
+For the release pull request to be created, enable "Allow GitHub Actions to create and approve
+pull requests" in the repository settings under Actions, General, Workflow permissions.
+
+### Signing
+
+Set these repository secrets to publish a properly signed APK:
+
+| Secret | Value |
+| --- | --- |
+| `RELEASE_KEYSTORE_BASE64` | base64 of the keystore file |
+| `RELEASE_KEYSTORE_PASSWORD` | keystore password |
+| `RELEASE_KEY_ALIAS` | key alias |
+| `RELEASE_KEY_PASSWORD` | key password |
+
+```bash
+base64 -i release.keystore | pbcopy   # macOS; paste the result into the secret
+```
+
+When `RELEASE_KEYSTORE_BASE64` is not set, the workflow still succeeds and attaches a debug-signed
+APK named `camera2-inspector-<tag>-debug.apk`. Use the same keystore for every release. A different
+key makes Android treat each build as a different app, and updating requires an uninstall.
+
 ## Permission
 
 The manifest declares `android.permission.CAMERA`, requested at runtime. On several Android
