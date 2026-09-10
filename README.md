@@ -144,6 +144,50 @@ the rest of the scan.
 Report content (key names, categories, notes, error types) stays in English regardless of the UI
 locale, so reports from different devices remain comparable.
 
+## Session monitor
+
+The app has a session monitor for reading the camera pipeline from a session it owns. For each
+frame it records:
+
+- the request the app sent (standard template values; the app writes no vendor key)
+- partial CaptureResult objects when the HAL delivers them
+- the TotalCaptureResult with every standard and vendor key the HAL populates
+- physical camera results when the device reports them (API 31 and later)
+- frame number, sensor timestamp, sequence id and JPEG availability
+- capture callbacks and the frame where the shutter fired
+
+While it runs, the monitor shows counters and events, keeps the recorded sessions in memory,
+compares them and exports JSON, CSV or a Markdown comparison. Reports can include all keys, only
+vendor keys, or only the interest list (HDR, RAW, MFNR, sensor, zoom, processing, OIS, AI/depth).
+
+### What the monitor cannot observe
+
+Android does not expose another client's CaptureRequest. CameraCaptureSession.CaptureCallback
+delivers results, not requests, and TotalCaptureResult.getRequest() returns the request of the
+session that owns the result. A regular app cannot open a camera that another app is using, and
+dumpsys media.camera needs shell access and still only shows static metadata, vendor tag
+descriptors, session parameter defaults and client events, not per frame requests. The monitor
+therefore never claims to observe the stock camera; it observes sessions created by this app.
+Request values from the stock camera are not observable without root, a privileged process or a
+HAL level trace.
+
+### Collecting sessions
+
+1. Open the monitor from the home app bar.
+2. Optionally import a dumpsys media.camera capture
+   (`adb shell dumpsys media.camera > dump.txt`). The file provides vendor tag ids (signed,
+   unsigned and hex) for the key directory.
+3. Select the camera id, type a label such as PHOTO_1X, HDR or PORTRAIT and open the camera.
+4. Start recording, let the preview run for a few seconds, press Capture still, keep recording for
+   a few more frames and stop.
+5. Repeat with the next label.
+6. Export the comparison as Markdown, or export each session as JSON or CSV.
+
+The comparison uses the first session as baseline and reports keys whose values changed, keys that
+appear or disappear, changes inside the capture window, and the frame and timestamp of the first
+observation. The labels describe the app's own sessions; they do not reproduce the stock camera
+modes, whose request values remain unobservable.
+
 ## User interface
 
 The UI uses Material 3 Expressive and follows the M3 Expressive design guidance: the expressive
@@ -235,8 +279,18 @@ app/src/main/java/dev/rafifos/camera2inspector/
 │   ├── CameraInspector.kt          read-only Camera2 access
 │   ├── CameraModels.kt             data model and summary
 │   ├── CameraValueSerializer.kt    defensive value serialization
+│   ├── DeviceReportFactory.kt      device info shared by both features
 │   ├── KeyFilter.kt                search, filters, namespaces
 │   └── KeyTypeResolver.kt          diagnostic-only reflection
+├── sniffer/
+│   ├── CameraSessionMonitor.kt     owns a session and records requests and results
+│   ├── DumpsysVendorTagParser.kt   vendor tag ids from a dumpsys capture
+│   ├── InterestingKeys.kt          interest groups used for highlighting
+│   ├── MetadataExtractor.kt        request and result key extraction
+│   ├── SessionDiff.kt              frame and session comparison
+│   ├── SnifferModels.kt            session and frame model
+│   ├── SnifferReport.kt            JSON, CSV and Markdown output
+│   └── VendorTagDirectory.kt       vendor key ids and types
 ├── export/
 │   ├── ReportJson.kt               pure JSON builder
 │   └── ReportExporter.kt           file writing through SAF
@@ -270,6 +324,12 @@ and that a failed key carries an error instead of aborting the report.
 - The app does not test whether a key accepts a given value. That would require opening the camera
   and sending requests, which is outside the read-only scope.
 - A report reflects what the device exposes at scan time. Firmware updates can change it.
+- The session monitor records only sessions created by this app. Another process's
+  CaptureRequests are not observable without root or a privileged process.
+- Physical camera results need API 31 or later and a session bound to physical streams, so they are
+  often empty.
+- The monitor skips a few known large keys (lens shading map, noise profile, hot pixel map) by
+  default and stops recording at 600 frames per session.
 - Fallback values such as `StreamConfigurationMap.toString()` are preserved as text, not as
   structure. The relevant standard fields also appear as separate characteristics.
 
@@ -291,5 +351,6 @@ picks a destination in the system file picker.
 - CSV and Markdown export.
 - Grouping keys by namespace.
 - Comparing two camera IDs on the same device.
+- Correlating the session timeline with an external `dumpsys media.camera` and logcat capture.
 - Diffing keys present in CaptureRequest but missing from CaptureResult.
 - Optional controlled CaptureRequest testing.
