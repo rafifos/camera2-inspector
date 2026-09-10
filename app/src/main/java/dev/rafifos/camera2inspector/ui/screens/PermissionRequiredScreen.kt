@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -60,7 +61,7 @@ fun PermissionRequiredScreen(
                     textAlign = TextAlign.Center,
                 )
             }
-            Button(onClick = onRequestPermission) {
+            Button(onClick = onRequestPermission, shapes = ButtonDefaults.shapes()) {
                 Text(stringResource(R.string.permission_grant))
             }
             TextButton(onClick = onOpenSettings) {
