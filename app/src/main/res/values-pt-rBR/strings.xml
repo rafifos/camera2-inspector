@@ -1,0 +1,128 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="Typos">
+    <string name="app_name">Camera2 Inspector</string>
+
+    <!-- Permissão -->
+    <string name="permission_title">Permissão de câmera</string>
+    <string name="permission_message">O Camera2 Inspector solicita a permissão CAMERA para consultar o CameraManager e ler as CameraCharacteristics do dispositivo. O app é somente leitura: não abre a câmera, não envia CaptureRequest e não altera configurações.</string>
+    <string name="permission_denied">A permissão foi negada. Você pode tentar novamente ou concedê-la nas configurações do aplicativo.</string>
+    <string name="permission_grant">Conceder permissão</string>
+    <string name="permission_open_settings">Abrir configurações do app</string>
+
+    <!-- Tela inicial -->
+    <string name="home_subtitle_fallback">Diagnóstico Camera2 (somente leitura)</string>
+    <string name="scan_title">Analisando Camera2…</string>
+    <string name="scan_status_preparing">Preparando análise…</string>
+    <string name="scan_status_camera">Analisando câmera %1$s…</string>
+    <string name="scan_status_default">Coletando CameraCharacteristics…</string>
+    <string name="scan_failed_title">A análise falhou</string>
+    <string name="scan_retry">Tentar novamente</string>
+    <string name="rescan">Analisar novamente</string>
+    <string name="export">Exportar</string>
+    <string name="export_success">Relatório exportado.</string>
+    <string name="export_failure">Falha ao exportar: %1$s</string>
+    <string name="export_open_failed">Não foi possível abrir o arquivo selecionado para escrita.</string>
+
+    <string name="device_title">Dispositivo</string>
+    <string name="field_manufacturer">Fabricante</string>
+    <string name="field_model">Modelo</string>
+    <string name="field_android">Android</string>
+    <string name="field_device">Device</string>
+    <string name="field_product">Produto</string>
+    <string name="field_hardware">Hardware</string>
+    <string name="field_fingerprint">Fingerprint</string>
+
+    <string name="summary_title">Resumo</string>
+    <string name="summary_cameras">Câmeras</string>
+    <string name="summary_vendor_characteristics">Vendor characteristics</string>
+    <string name="summary_vendor_capture_request">Vendor CaptureRequest</string>
+    <string name="summary_vendor_capture_result">Vendor CaptureResult</string>
+    <string name="summary_vendor_physical_request">Vendor Physical Request</string>
+    <string name="summary_vendor_session_keys">Vendor Session keys</string>
+    <string name="summary_totals">Totais: %1$d characteristics · %2$d CaptureRequest · %3$d CaptureResult · %4$d Physical Request · %5$d Session</string>
+
+    <string name="cameras_title">Câmeras (%1$d)</string>
+    <string name="cameras_empty">O dispositivo não reportou nenhuma câmera através de CameraManager.cameraIdList.</string>
+    <string name="report_errors_title">Erros globais da análise</string>
+
+    <!-- Cartão de câmera -->
+    <string name="camera_id">Camera ID %1$s</string>
+    <string name="logical_multi_camera">Logical multi-camera</string>
+    <string name="physical_ids_short">Physical: %1$s</string>
+    <string name="stat_characteristics">Characteristics</string>
+    <string name="stat_capture_request">CaptureRequest</string>
+    <string name="stat_capture_result">CaptureResult</string>
+    <string name="stat_physical_request">Physical Request</string>
+    <string name="stat_session">Session</string>
+    <string name="vendor_count">vendor %1$d</string>
+    <string name="badge_vendor">vendor</string>
+
+    <!-- Detalhe da câmera -->
+    <string name="back">Voltar</string>
+    <string name="camera_detail_subtitle">%1$s · %2$s</string>
+    <string name="search_placeholder">Pesquisar keys (ex.: hdr)</string>
+    <string name="clear_search">Limpar pesquisa</string>
+    <string name="filter_vendor_only">Somente vendor</string>
+    <string name="filter_all_namespaces">Todos os namespaces</string>
+    <string name="keys_result_count">%1$d de %2$d keys · %3$s</string>
+    <string name="keys_empty">Nenhuma key corresponde ao filtro atual.</string>
+    <string name="overview_title">Visão geral</string>
+    <string name="overview_logical_multi_camera">Logical multi-camera</string>
+    <string name="overview_physical_ids">Physical camera IDs</string>
+    <string name="overview_hardware_level">Hardware level</string>
+    <string name="overview_lens_facing">Lens facing</string>
+    <string name="overview_sensor_orientation">Sensor orientation</string>
+    <string name="value_not_reported">não reportado</string>
+    <string name="value_none_reported">Nenhum reportado</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="notes_title">Observações</string>
+    <string name="note_bullet">• %1$s</string>
+    <string name="physical_ids_associated">Physical IDs associados: %1$s</string>
+    <string name="physical_ids_not_reported">Physical IDs não reportados por esta câmera</string>
+
+    <!-- Observações da análise (também serializadas no relatório) -->
+    <string name="note_logical_multi_camera">Dispositivo reporta REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA.</string>
+    <string name="note_physical_ids">Physical camera IDs reportados: %1$s.</string>
+    <string name="note_keys_not_reported">%1$s não retornou keys.</string>
+    <string name="note_characteristics_unreadable">Não foi possível ler as CameraCharacteristics desta câmera.</string>
+
+    <!-- Notas de disponibilidade -->
+    <string name="availability_characteristics">Valor lido de CameraCharacteristics para esta câmera. Erros de leitura são registrados por key.</string>
+    <string name="availability_capture_request">Reportada pelo dispositivo como CaptureRequest key disponível. A presença não significa que o app conhece valores válidos nem que a key é gravável; nenhum CaptureRequest é enviado por este app.</string>
+    <string name="availability_capture_result">Reportada pelo dispositivo como CaptureResult key disponível. Resultados são saídas do pipeline da câmera, não configuração.</string>
+    <string name="availability_physical_request">Reportada pelo dispositivo como physical camera CaptureRequest key disponível. Aplica-se aos physical camera IDs associados a esta câmera lógica, quando o dispositivo os reporta.</string>
+    <string name="availability_session">Reportada pelo dispositivo como session key disponível (availableSessionKeys). Nenhuma sessão é criada e nenhum valor é alterado por este app.</string>
+
+    <!-- Detalhe da key -->
+    <string name="key_detail_title">Detalhe da key</string>
+    <string name="key_not_found">A key %1$s não está presente no relatório atual desta câmera.</string>
+    <string name="copy_key_name">Copiar nome da key</string>
+    <string name="metadata_title">Metadados</string>
+    <string name="field_type">Tipo</string>
+    <string name="field_type_source">Origem do tipo</string>
+    <string name="field_category">Categoria</string>
+    <string name="field_vendor">Vendor</string>
+    <string name="field_namespace">Namespace</string>
+    <string name="field_camera">Camera</string>
+    <string name="field_physical_ids">Physical IDs associados</string>
+    <string name="field_origin">Origem</string>
+    <string name="availability_title">Disponibilidade</string>
+    <string name="vendor_disclaimer">O nome sugere uma key vendor-specific. O app não atribui significado semântico a ela e não sabe quais valores são válidos.</string>
+    <string name="error_title">Erro ao ler a key</string>
+    <string name="field_exception_type">Tipo da exceção</string>
+    <string name="field_message">Mensagem</string>
+    <string name="value_title">Valor</string>
+    <string name="value_serialization">Serialização: %1$s</string>
+    <string name="copy_value">Copiar valor</string>
+    <string name="value_none_for_category">Nenhum valor é exposto nesta categoria. A key apenas indica que o dispositivo a reporta como disponível para %1$s.</string>
+    <string name="value_unreadable">O valor não pôde ser lido para esta key.</string>
+    <string name="raw_tostring_title">toString() original</string>
+    <string name="copy_tostring">Copiar toString</string>
+    <string name="no_message">sem mensagem</string>
+    <string name="key_row_error">Erro: %1$s</string>
+
+    <!-- Rótulos da área de transferência -->
+    <string name="clip_label_key">Camera2 Inspector key</string>
+    <string name="clip_label_value">Camera2 Inspector value</string>
+    <string name="clip_label_tostring">Camera2 Inspector toString</string>
+</resources>
