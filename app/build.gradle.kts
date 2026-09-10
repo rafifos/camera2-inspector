@@ -11,20 +11,44 @@ android {
         version = release(37)
     }
 
+    val appVersionName = "1.0.0" // x-release-please-version
+    val appVersionCode = appVersionName
+        .split('.')
+        .mapNotNull { it.toIntOrNull() }
+        .let { parts ->
+            parts.getOrElse(0) { 0 } * 10_000 + parts.getOrElse(1) { 0 } * 100 + parts.getOrElse(2) { 0 }
+        }
+
     defaultConfig {
         applicationId = "dev.rafifos.camera2inspector"
         minSdk = 28
         targetSdk = 37
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = appVersionCode
+        versionName = appVersionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        val keystorePath = System.getenv("RELEASE_KEYSTORE_PATH")
+        if (!keystorePath.isNullOrBlank()) {
+            create("release") {
+                storeFile = file(keystorePath)
+                storePassword = System.getenv("RELEASE_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("RELEASE_KEY_ALIAS")
+                keyPassword = System.getenv("RELEASE_KEY_PASSWORD")
+            }
+        }
     }
 
     buildTypes {
         release {
             optimization {
                 enable = false
+            }
+            val releaseSigning = signingConfigs.findByName("release")
+            if (releaseSigning != null) {
+                signingConfig = releaseSigning
             }
         }
     }
