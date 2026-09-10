@@ -34,7 +34,7 @@ fun CameraCard(
         ) {
             Text(
                 text = stringResource(R.string.camera_id, report.id),
-                style = MaterialTheme.typography.titleLarge,
+                style = MaterialTheme.typography.titleLargeEmphasized,
             )
 
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
