@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
@@ -63,6 +64,7 @@ fun HomeScreen(
     onRetry: () -> Unit,
     onExportMessageShown: () -> Unit,
     onCameraClick: (String) -> Unit,
+    onOpenMonitor: () -> Unit,
 ) {
     val snackbarHostState = remember { SnackbarHostState() }
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
@@ -90,6 +92,12 @@ fun HomeScreen(
                     )
                 },
                 actions = {
+                    IconButton(onClick = onOpenMonitor) {
+                        Icon(
+                            Icons.Default.PlayArrow,
+                            contentDescription = stringResource(R.string.monitor_open_action),
+                        )
+                    }
                     if (report != null && !state.isScanning) {
                         IconButton(onClick = onRetry) {
                             Icon(

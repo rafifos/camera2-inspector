@@ -125,4 +125,36 @@
     <string name="clip_label_key">Camera2 Inspector key</string>
     <string name="clip_label_value">Camera2 Inspector value</string>
     <string name="clip_label_tostring">Camera2 Inspector toString</string>
+
+    <!-- Monitor de sessão -->
+    <string name="monitor_title">Monitor de sessão</string>
+    <string name="monitor_subtitle">Câmera %1$s</string>
+    <string name="monitor_open_action">Monitor de sessão</string>
+    <string name="monitor_limitation">Este monitor registra sessões criadas por este app, incluindo TotalCaptureResult, resultados parciais e callbacks. O Android não permite que um app observe CaptureRequests enviados por outro processo, como a câmera stock; por isso nenhum valor de request da câmera stock pode aparecer aqui.</string>
+    <string name="monitor_label">Rótulo da sessão</string>
+    <string name="monitor_label_hint">ex.: 1X, HDR, PORTRAIT</string>
+    <string name="monitor_open_camera">Abrir câmera</string>
+    <string name="monitor_close_camera">Fechar câmera</string>
+    <string name="monitor_start_recording">Iniciar gravação</string>
+    <string name="monitor_stop_recording">Parar gravação</string>
+    <string name="monitor_capture">Capturar foto</string>
+    <string name="monitor_import_dump">Importar dumpsys</string>
+    <string name="monitor_imported_ids">IDs de vendor importados: %1$d</string>
+    <string name="monitor_status">Status</string>
+    <string name="monitor_frames_seen">Frames vistos</string>
+    <string name="monitor_frames_recorded">Frames gravados</string>
+    <string name="monitor_captures">Capturas</string>
+    <string name="monitor_vendor_request_keys">Vendor request keys, último frame</string>
+    <string name="monitor_vendor_result_keys">Vendor result keys, último frame</string>
+    <string name="monitor_last_frame">Último frame</string>
+    <string name="monitor_sessions">Sessões</string>
+    <string name="monitor_no_sessions">Nenhuma sessão gravada ainda.</string>
+    <string name="monitor_session_summary">%1$s · %2$d frames · %3$d capturas</string>
+    <string name="monitor_export_json">Exportar JSON</string>
+    <string name="monitor_export_csv">Exportar CSV</string>
+    <string name="monitor_export_comparison">Exportar comparação</string>
+    <string name="monitor_comparison_changes">%1$d mudanças de valor vs %2$s</string>
+    <string name="monitor_comparison_none">Nenhuma diferença observada contra %1$s.</string>
+    <string name="monitor_events">Eventos</string>
+    <string name="monitor_no_events">Nenhum evento ainda.</string>
 </resources>

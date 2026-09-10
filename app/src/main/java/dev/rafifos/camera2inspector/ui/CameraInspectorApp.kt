@@ -35,16 +35,19 @@ import dev.rafifos.camera2inspector.export.ReportExporter
 import dev.rafifos.camera2inspector.ui.screens.CameraDetailScreen
 import dev.rafifos.camera2inspector.ui.screens.HomeScreen
 import dev.rafifos.camera2inspector.ui.screens.KeyDetailScreen
+import dev.rafifos.camera2inspector.ui.screens.MonitorScreen
 import dev.rafifos.camera2inspector.ui.screens.PermissionRequiredScreen
 
 private sealed interface NavTarget {
     data object Home : NavTarget
+    data object Monitor : NavTarget
     data class CameraDetail(val cameraId: String) : NavTarget
     data class KeyDetail(val cameraId: String, val category: KeyCategory, val keyName: String) : NavTarget
 }
 
 private fun NavTarget.depth(): Int = when (this) {
     NavTarget.Home -> 0
+    NavTarget.Monitor -> 1
     is NavTarget.CameraDetail -> 1
     is NavTarget.KeyDetail -> 2
 }
@@ -86,6 +89,7 @@ fun CameraInspectorApp() {
         ActivityResultContracts.CreateDocument("application/json"),
     ) { uri: Uri? -> if (uri != null) viewModel.export(uri) }
 
+    var showMonitor by rememberSaveable { mutableStateOf(false) }
     var selectedCameraId by rememberSaveable { mutableStateOf<String?>(null) }
     var selectedCategoryName by rememberSaveable { mutableStateOf<String?>(null) }
     var selectedKeyName by rememberSaveable { mutableStateOf<String?>(null) }
@@ -96,18 +100,21 @@ fun CameraInspectorApp() {
         KeyCategory.entries.firstOrNull { it.name == name }
     }
 
-    BackHandler(enabled = selectedCameraId != null) {
-        if (selectedKeyName != null) {
-            selectedKeyName = null
-        } else {
-            selectedCameraId = null
-            selectedCategoryName = null
+    BackHandler(enabled = showMonitor || selectedCameraId != null) {
+        when {
+            showMonitor -> showMonitor = false
+            selectedKeyName != null -> selectedKeyName = null
+            else -> {
+                selectedCameraId = null
+                selectedCategoryName = null
+            }
         }
     }
 
     val cameraId = selectedCameraId
     val keyName = selectedKeyName
     val navTarget: NavTarget = when {
+        showMonitor -> NavTarget.Monitor
         selectedCamera == null || cameraId == null -> NavTarget.Home
         selectedCategory != null && keyName != null ->
             NavTarget.KeyDetail(cameraId, selectedCategory, keyName)
@@ -149,7 +156,10 @@ fun CameraInspectorApp() {
                 onRetry = { viewModel.scan(force = true) },
                 onExportMessageShown = viewModel::consumeExportMessage,
                 onCameraClick = { cameraId -> selectedCameraId = cameraId },
+                onOpenMonitor = { showMonitor = true },
             )
+
+            NavTarget.Monitor -> MonitorScreen(onBack = { showMonitor = false })
 
             is NavTarget.CameraDetail -> report
                 ?.cameras

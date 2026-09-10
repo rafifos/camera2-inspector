@@ -125,4 +125,36 @@
     <string name="clip_label_key">Camera2 Inspector key</string>
     <string name="clip_label_value">Camera2 Inspector value</string>
     <string name="clip_label_tostring">Camera2 Inspector toString</string>
+
+    <!-- Session monitor -->
+    <string name="monitor_title">Session monitor</string>
+    <string name="monitor_subtitle">Camera %1$s</string>
+    <string name="monitor_open_action">Session monitor</string>
+    <string name="monitor_limitation">This monitor records sessions created by this app, including TotalCaptureResult, partial results and callbacks. Android does not allow an app to observe CaptureRequests sent by another process such as the stock camera, so no stock request values can appear here.</string>
+    <string name="monitor_label">Session label</string>
+    <string name="monitor_label_hint">e.g. 1X, HDR, PORTRAIT</string>
+    <string name="monitor_open_camera">Open camera</string>
+    <string name="monitor_close_camera">Close camera</string>
+    <string name="monitor_start_recording">Start recording</string>
+    <string name="monitor_stop_recording">Stop recording</string>
+    <string name="monitor_capture">Capture still</string>
+    <string name="monitor_import_dump">Import dumpsys</string>
+    <string name="monitor_imported_ids">Vendor ids imported: %1$d</string>
+    <string name="monitor_status">Status</string>
+    <string name="monitor_frames_seen">Frames seen</string>
+    <string name="monitor_frames_recorded">Frames recorded</string>
+    <string name="monitor_captures">Captures</string>
+    <string name="monitor_vendor_request_keys">Vendor request keys, last frame</string>
+    <string name="monitor_vendor_result_keys">Vendor result keys, last frame</string>
+    <string name="monitor_last_frame">Last frame</string>
+    <string name="monitor_sessions">Sessions</string>
+    <string name="monitor_no_sessions">No session recorded yet.</string>
+    <string name="monitor_session_summary">%1$s · %2$d frames · %3$d captures</string>
+    <string name="monitor_export_json">Export JSON</string>
+    <string name="monitor_export_csv">Export CSV</string>
+    <string name="monitor_export_comparison">Export comparison</string>
+    <string name="monitor_comparison_changes">%1$d value changes vs %2$s</string>
+    <string name="monitor_comparison_none">No differences observed against %1$s.</string>
+    <string name="monitor_events">Events</string>
+    <string name="monitor_no_events">No events yet.</string>
 </resources>
