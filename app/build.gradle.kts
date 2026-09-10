@@ -11,7 +11,7 @@ android {
         version = release(37)
     }
 
-    val appVersionName = "1.0.0" // x-release-please-version
+    val appVersionName = "1.1.0" // x-release-please-version
     val appVersionCode = appVersionName
         .split('.')
         .mapNotNull { it.toIntOrNull() }
