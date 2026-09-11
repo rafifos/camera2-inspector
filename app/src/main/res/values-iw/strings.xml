@@ -1,1 +1,146 @@
-<resources></resources>
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="app_name">מפקח מצלמה2</string>
+
+    
+    <string name="permission_message">Camera2 Inspector מבקש מה-CAMERA הרשאת שאילתה ל-CameraManager ולקרוא את מאפייני המצלמה של המכשיר.האפליקציה היא לקריאה בלבד: היא לא פותחת את המצלמה, שולחת CaptureRequests או משנה הגדרות.</string>
+    <string name="permission_denied">ההרשאה נדחתה.אתה יכול לנסות שוב או להעניק זאת בהגדרות האפליקציה.</string>
+    <string name="permission_grant">תן רשות</string>
+    <string name="permission_open_settings">פתח את הגדרות האפליקציה</string>
+
+    
+    <string name="home_subtitle_fallback">אבחון מצלמה 2 (לקריאה בלבד)</string>
+    <string name="scan_status_preparing">מכין סריקה…</string>
+    <string name="scan_status_camera">מנתח את המצלמה %1$s…</string>
+    <string name="scan_status_default">אוסף מאפייני מצלמה…</string>
+    <string name="scan_failed_title">הסריקה נכשלה</string>
+    <string name="scan_retry">נסה שוב</string>
+    <string name="rescan">סרוק שוב</string>
+    <string name="export">יְצוּא</string>
+    <string name="export_success">הדוח יוצא.</string>
+    <string name="export_failure">הייצוא נכשל: %1$s</string>
+    <string name="export_open_failed">לא ניתן היה לפתוח את הקובץ שנבחר לכתיבה.</string>
+
+    <string name="device_title">הֶתקֵן</string>
+    <string name="field_manufacturer">יַצרָן</string>
+    <string name="field_model">דֶגֶם</string>
+    <string name="field_device">הֶתקֵן</string>
+    <string name="field_product">מוּצָר</string>
+    <string name="field_hardware">חוּמרָה</string>
+    <string name="field_fingerprint">טְבִיעַת אֶצבָּעוֹת</string>
+
+    <string name="summary_title">תַקצִיר</string>
+    <string name="summary_cameras">מצלמות</string>
+    <string name="summary_vendor_characteristics">מאפייני הספק</string>
+    <string name="summary_vendor_capture_request">ספק CaptureRequest</string>
+    <string name="summary_vendor_capture_result">ספק CaptureResult</string>
+    <string name="summary_vendor_session_keys">מפתחות סשן של ספקים</string>
+    <string name="summary_totals">סיכומים: %1$d מאפיינים · %2$d CaptureRequest · %3$d CaptureResult · %4$d בקשה פיזית · %5$d הפעלה</string>
+
+    <string name="cameras_empty">המכשיר לא דיווח על מצלמות דרך CameraManager.cameraIdList.</string>
+    <string name="report_errors_title">שגיאות סריקה גלובליות</string>
+
+    
+    <string name="camera_id">מזהה מצלמה %1$s</string>
+    <string name="physical_ids_short">פיזי: %1$s</string>
+    <string name="stat_characteristics">מאפיינים</string>
+    <string name="stat_capture_request">CaptureRequest</string>
+    <string name="stat_capture_result">CaptureResult</string>
+    <string name="stat_physical_request">בקשה פיזית</string>
+    <string name="stat_session">מוֹשָׁב</string>
+    <string name="vendor_count">ספק %1$d</string>
+    <string name="badge_vendor">מוֹכֵר</string>
+
+    
+    <string name="search_placeholder">מקשי חיפוש (למשל hdr)</string>
+    <string name="clear_search">נקה חיפוש</string>
+    <string name="filter_vendor_only">ספק בלבד</string>
+    <string name="filter_all_namespaces">כל מרחבי השמות</string>
+    <string name="keys_result_count">%1$d מתוך %2$d מפתחות · %3$s</string>
+    <string name="keys_empty">אין מפתחות שתואמים למסנן הנוכחי.</string>
+    <string name="overview_title">סקירה כללית</string>
+    <string name="overview_logical_multi_camera">ריבוי מצלמה לוגית</string>
+    <string name="overview_physical_ids">מזהי מצלמה פיזית</string>
+    <string name="overview_hardware_level">רמת חומרה</string>
+    <string name="overview_lens_facing">עדשה פונה</string>
+    <string name="overview_sensor_orientation">כיוון חיישן</string>
+    <string name="value_not_reported">לא דווח</string>
+    <string name="value_none_reported">אף אחד לא דווח</string>
+    <string name="yes">כֵּן</string>
+    <string name="no">לֹא</string>
+    <string name="notes_title">הערות</string>
+    <string name="note_bullet">• %1$s</string>
+    <string name="physical_ids_associated">מזהים פיזיים משויכים: %1$s</string>
+    <string name="physical_ids_not_reported">תעודות זהות פיזיות לא דווחו על ידי המצלמה הזו</string>
+
+    
+    <string name="note_logical_multi_camera">דוחות מכשיר REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA.</string>
+    <string name="note_keys_not_reported">%1$s לא החזיר מפתחות.</string>
+    <string name="note_characteristics_unreadable">לא ניתן היה לקרוא את מאפייני המצלמה עבור מצלמה זו.</string>
+
+    
+    <string name="availability_characteristics">ערך שנקרא מ-CameraCharacteristics עבור מצלמה זו.שגיאת קריאה מדווחת לכל מפתח.</string>
+    <string name="availability_capture_request">דווח על ידי המכשיר כמפתח CaptureRequest זמין.נוכחות לא אומרת שהאפליקציה הזו יודעת ערכים חוקיים, וגם לא שהמפתח ניתן לכתיבה;לא נשלחת CaptureRequest על ידי אפליקציה זו.</string>
+    <string name="availability_capture_result">דווח על ידי המכשיר כמפתח CaptureResult זמין.התוצאות הן פלטים של צינור המצלמה, לא תצורה.</string>
+    <string name="availability_physical_request">דווח על ידי המכשיר כמפתח CaptureRequest של מצלמה פיזית זמינה.זה חל על מזהי המצלמה הפיזיים המשויכים למצלמה הלוגית הזו, כאשר המכשיר מדווח עליהם.</string>
+    <string name="availability_session">דווח על ידי המכשיר כמפתח הפעלה זמין (availableSessionKeys).לא נוצרה הפעלה ושום ערך לא שונה על ידי אפליקציה זו.</string>
+
+    
+    <string name="key_detail_title">פרט מפתח</string>
+    <string name="key_not_found">המפתח %1$s אינו קיים בדוח הנוכחי עבור מצלמה זו.</string>
+    <string name="copy_key_name">העתק את שם המפתח</string>
+    <string name="metadata_title">מטא נתונים</string>
+    <string name="field_vendor">מוֹכֵר</string>
+    <string name="field_camera">מַצלֵמָה</string>
+    <string name="field_physical_ids">תעודות זהות פיזיות קשורות</string>
+    <string name="field_origin">מָקוֹר</string>
+    <string name="vendor_disclaimer">השם מרמז על מפתח ספציפי לספק.האפליקציה אינה מייחסת לה משמעות סמנטית ואינה יודעת אילו ערכים תקפים.</string>
+    <string name="error_title">שגיאה בקריאת מפתח</string>
+    <string name="field_exception_type">סוג חריג</string>
+    <string name="field_message">הוֹדָעָה</string>
+    <string name="value_title">עֵרֶך</string>
+    <string name="value_serialization">סדרה: %1$s</string>
+    <string name="copy_value">העתק ערך</string>
+    <string name="value_none_for_category">אין ערך חשוף בקטגוריה זו.המפתח מציין רק שהמכשיר מדווח שהוא זמין עבור %1$s.</string>
+    <string name="value_unreadable">לא ניתן היה לקרוא את הערך עבור מפתח זה.</string>
+    <string name="raw_tostring_title">מקורי toString()</string>
+    <string name="copy_tostring">העתק למחרוזת</string>
+    <string name="no_message">אין הודעה</string>
+    <string name="key_row_error">שגיאה: %1$s</string>
+
+    
+    <string name="clip_label_key">מקש מפקח מצלמה2</string>
+    <string name="clip_label_value">Camera2 Inspector ערך</string>
+    <string name="clip_label_tostring">Camera2 Inspector toString</string>
+
+    
+    <string name="monitor_title">מוניטור מושב</string>
+    <string name="monitor_subtitle">מצלמה %1$s</string>
+    <string name="monitor_open_action">מוניטור מושב</string>
+    <string name="monitor_limitation">צג זה מתעד הפעלות שנוצרו על ידי אפליקציה זו, כולל TotalCaptureResult, תוצאות חלקיות והתקשרויות חוזרות.אנדרואיד לא מאפשרת לאפליקציה לצפות ב-CaptureRequests שנשלחו על ידי תהליך אחר כמו מצלמת המניות, כך שלא יכולים להופיע כאן ערכי בקשת מניות.</string>
+    <string name="monitor_label">תווית הפעלה</string>
+    <string name="monitor_label_hint">לְמָשָׁל1X, HDR, פורטרט</string>
+    <string name="monitor_open_camera">פתח את המצלמה</string>
+    <string name="monitor_close_camera">סגור את המצלמה</string>
+    <string name="monitor_start_recording">התחל להקליט</string>
+    <string name="monitor_stop_recording">תפסיק להקליט</string>
+    <string name="monitor_capture">לכיד עדיין</string>
+    <string name="monitor_import_dump">ייבוא ​​dumpsys</string>
+    <string name="monitor_imported_ids">מזהי ספק שיובאו: %1$d</string>
+    <string name="monitor_status">סטָטוּס</string>
+    <string name="monitor_frames_seen">מסגרות נראות</string>
+    <string name="monitor_frames_recorded">מסגרות מוקלטות</string>
+    <string name="monitor_captures">לוכדות</string>
+    <string name="monitor_vendor_request_keys">מפתחות בקשת ספק, מסגרת אחרונה</string>
+    <string name="monitor_vendor_result_keys">מפתחות תוצאות הספק, מסגרת אחרונה</string>
+    <string name="monitor_last_frame">מסגרת אחרונה</string>
+    <string name="monitor_sessions">הפעלות</string>
+    <string name="monitor_no_sessions">עדיין לא נרשמה הפעלה.</string>
+    <string name="monitor_session_summary">%1$s · %2$d פריימים · %3$d צילומים</string>
+    <string name="monitor_export_json">ייצא JSON</string>
+    <string name="monitor_export_csv">ייצא CSV</string>
+    <string name="monitor_export_comparison">השוואת יצוא</string>
+    <string name="monitor_comparison_changes">%1$d שינויים בערך לעומת %2$s</string>
+    <string name="monitor_comparison_none">לא נצפו הבדלים מול %1$s.</string>
+    <string name="monitor_events">אירועים</string>
+    <string name="monitor_no_events">עדיין אין אירועים.</string>
+</resources>

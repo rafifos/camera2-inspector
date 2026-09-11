@@ -1,1 +1,145 @@
-<resources></resources>
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="app_name">ڪئميرا 2 انسپيڪٽر</string>
+
+    
+    <string name="permission_title">ڪئميرا جي اجازت</string>
+    <string name="permission_message">ڪئميرا 2 انسپيڪٽر ڪيمرا مئنيجر کان سوال ڪرڻ ۽ ڊوائيس جي ڪئميرا جي خصوصيتن کي پڙهڻ لاءِ ڪيمرا جي اجازت جي درخواست ڪري ٿو.ايپ صرف پڙهڻ لاءِ آهي: اها ڪئميرا نه کوليندي، نه موڪليندي CaptureRequests، يا سيٽنگون تبديل ڪندي.</string>
+    <string name="permission_denied">اجازت رد ڪئي وئي.توھان وري ڪوشش ڪري سگھوٿا يا ايپ سيٽنگن ۾ ان کي ڏيو.</string>
+    <string name="permission_grant">اجازت ڏيو</string>
+    <string name="permission_open_settings">ايپ سيٽنگون کوليو</string>
+
+    
+    <string name="home_subtitle_fallback">Camera2 تشخيص (صرف پڙهڻ لاءِ)</string>
+    <string name="scan_title">اسڪيننگ ڪيمرا 2…</string>
+    <string name="scan_status_preparing">اسڪين تيار ڪري رهيو آهي…</string>
+    <string name="scan_status_camera">ڪئميرا جو تجزيو ڪيو پيو وڃي %1$s…</string>
+    <string name="scan_status_default">ڪيمرا جون خاصيتون گڏ ڪرڻ…</string>
+    <string name="scan_failed_title">اسڪين ناڪام</string>
+    <string name="scan_retry">ٻيهر ڪوشش ڪريو</string>
+    <string name="rescan">ٻيهر اسڪين ڪريو</string>
+    <string name="export">برآمد</string>
+    <string name="export_success">رپورٽ برآمد ڪئي وئي.</string>
+    <string name="export_failure">برآمد ناڪام ٿيو: %1$s</string>
+    <string name="export_open_failed">لکڻ لاءِ چونڊيل فائل نه کولي سگھي.</string>
+
+    <string name="device_title">ڊوائيس</string>
+    <string name="field_manufacturer">ٺاهيندڙ</string>
+    <string name="field_model">ماڊل</string>
+    <string name="field_android">Android</string>
+    <string name="field_device">ڊوائيس</string>
+    <string name="field_product">پيداوار</string>
+    <string name="field_hardware">هارڊويئر</string>
+    <string name="field_fingerprint">آڱر جو نشان</string>
+
+    <string name="summary_title">خلاصو</string>
+    <string name="summary_cameras">ڪيمرا</string>
+    <string name="summary_vendor_characteristics">وڪرو ڪندڙ خاصيتون</string>
+    <string name="summary_vendor_capture_request">وينڊر جي گرفتاري جي درخواست</string>
+    <string name="summary_vendor_capture_result">وينڊر ڪيپچر جا نتيجا</string>
+    <string name="summary_vendor_physical_request">وڪرو ڪندڙ جسماني درخواست</string>
+    <string name="summary_vendor_session_keys">وينڊر سيشن ڪيچ</string>
+    <string name="summary_totals">ڪل: %1$d خاصيتون · %2$d CaptureRequest · %3$d CaptureResult · %4$d جسماني درخواست · %5$d سيشن</string>
+
+    <string name="cameras_title">ڪئميرا (%1$d)</string>
+    <string name="cameras_empty">ڊوائيس CameraManager.cameraIdList ذريعي ڪي ڪيمرا نه ٻڌايو.</string>
+    <string name="report_errors_title">گلوبل اسڪين غلطيون</string>
+
+    
+    <string name="camera_id">ڪئميرا ID %1$s</string>
+    <string name="logical_multi_camera">منطقي ملٽي ڪئميرا</string>
+    <string name="physical_ids_short">جسماني: %1$s</string>
+    <string name="stat_characteristics">خاصيتون</string>
+    <string name="stat_capture_request">قبضي جي درخواست</string>
+    <string name="stat_capture_result">ڪيپچر جا نتيجا</string>
+    <string name="stat_physical_request">جسماني درخواست</string>
+    <string name="stat_session">سيشن</string>
+    <string name="vendor_count">وڪرو ڪندڙ %1$d</string>
+    <string name="badge_vendor">وڪرو ڪندڙ</string>
+
+    
+    <string name="back">پوئتي</string>
+    <string name="camera_detail_subtitle">%1$s · %2$s</string>
+    <string name="search_placeholder">ڳولها ڪنجيون (مثال طور hdr)</string>
+    <string name="clear_search">صاف ڳولا</string>
+    <string name="filter_vendor_only">صرف وڪرو ڪندڙ</string>
+    <string name="filter_all_namespaces">سڀ نالا</string>
+    <string name="keys_result_count">%1$d مان %2$d چاٻيون · %3$s</string>
+    <string name="keys_empty">موجوده فلٽر سان ڪا به ڪيچ نه ملندي آهي.</string>
+    <string name="overview_title">اوسر</string>
+    <string name="overview_logical_multi_camera">منطقي ملٽي ڪئميرا</string>
+    <string name="overview_physical_ids">جسماني ڪئميرا IDs</string>
+    <string name="overview_hardware_level">هارڊويئر سطح</string>
+    <string name="overview_lens_facing">لينس جو منهن</string>
+    <string name="overview_sensor_orientation">سينسر جي رخ</string>
+    <string name="value_not_reported">اطلاع نه ڏنو</string>
+    <string name="value_none_reported">ڪوبه اطلاع نه ڏنو</string>
+    <string name="yes">ها</string>
+    <string name="no">نه</string>
+    <string name="notes_title">نوٽس</string>
+    <string name="note_bullet">• %1$s</string>
+    <string name="physical_ids_associated">لاڳاپيل جسماني IDs: %1$s</string>
+    <string name="physical_ids_not_reported">جسماني سڃاڻپ هن ڪئميرا طرفان نه ڄاڻايل آهي</string>
+
+    
+    <string name="note_logical_multi_camera">ڊوائيس رپورٽون REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA.</string>
+    <string name="note_physical_ids">فزيڪل ڪيمرا IDs رپورٽ ڪئي وئي: %1$s.</string>
+    <string name="note_keys_not_reported">%1$s ڪا به چاٻي نه ڏني.</string>
+    <string name="note_characteristics_unreadable">هن ڪئميرا لاءِ ڪيمرا جون خاصيتون پڙهي نه سگهجن ٿيون.</string>
+
+    
+    <string name="availability_characteristics">هن ڪئميرا لاءِ ڪيمرا جي خصوصيتن مان پڙهي قدر.ھڪڙي پڙھڻ واري غلطي جي رپورٽ ڪئي وئي آھي في چاٻي.</string>
+    <string name="availability_capture_request">ڊيوائس پاران رپورٽ ڪيل هڪ دستياب CaptureRequest جي طور تي.موجودگي جو مطلب اهو ناهي ته هي ايپ صحيح قدرن کي ڄاڻي ٿي، ۽ نه ئي اهو اهم آهي لکڻ جي قابل؛هن ايپ پاران ڪا به CaptureRequest نه موڪلي وئي آهي.</string>
+    <string name="availability_capture_result">ڊيوائس پاران رپورٽ ڪيل هڪ دستياب CaptureResult جي طور تي.نتيجا ڪئميرا پائپ لائن جا نتيجا آهن، ترتيب نه.</string>
+    <string name="availability_physical_request">ڊيوائس پاران هڪ دستياب فزيڪل ڪئميرا CaptureRequest جي طور تي رپورٽ ڪئي وئي.اهو لاڳو ٿئي ٿو فزيڪل ڪيمرا IDs تي هن منطقي ڪئميرا سان لاڳاپيل، جڏهن ڊوائيس انهن کي رپورٽ ڪري ٿو.</string>
+    <string name="availability_session">ڊيوائس پاران دستياب سيشن چيڪ جي طور تي رپورٽ ڪئي وئي (availableSessionKeys).ڪو به سيشن پيدا نه ڪيو ويو آهي ۽ نه ئي قدر هن ايپ پاران تبديل ٿيل آهي.</string>
+
+    
+    <string name="key_detail_title">اهم تفصيل</string>
+    <string name="key_not_found">اهم %1$s هن ڪئميرا لاءِ موجوده رپورٽ ۾ موجود ناهي.</string>
+    <string name="metadata_title">ميٽاداٽا</string>
+    <string name="field_type">قسم</string>
+    <string name="field_type_source">قسم جو ذريعو</string>
+    <string name="field_vendor">وڪڻندڙ</string>
+    <string name="field_namespace">نالي جي جاءِ</string>
+    <string name="field_camera">ڪئميرا</string>
+    <string name="field_origin">اصليت</string>
+    <string name="availability_title">دستيابي</string>
+    <string name="vendor_disclaimer">نالو پيش ڪري ٿو وينڊر-مخصوص ڪنجي.ايپ ان کي سيمينٽڪ معني نه ڏئي ٿي ۽ نه ڄاڻندو آهي ته ڪهڙا قدر صحيح آهن.</string>
+    <string name="error_title">غلطي پڙهڻ جي چاٻي</string>
+    <string name="field_exception_type">استثنا جو قسم</string>
+    <string name="field_message">نياپو</string>
+    <string name="value_serialization">سيريلائيزيشن: %1$s</string>
+    <string name="copy_value">نقل جو قدر</string>
+    <string name="value_unreadable">هن ڪيئي لاءِ قدر پڙهي نه ٿي سگهي.</string>
+    <string name="copy_tostring">ڪاپي ڪريو String ڏانهن</string>
+    <string name="no_message">ڪوبه پيغام</string>
+    <string name="key_row_error">غلطي: %1$s</string>
+
+    
+    <string name="clip_label_key">ڪيمرا 2 انسپيڪٽر چيڪ</string>
+    <string name="clip_label_value">ڪئميرا 2 انسپيڪٽر جي قيمت</string>
+    <string name="monitor_title">سيشن مانيٽر</string>
+    <string name="monitor_subtitle">ڪئميرا %1$s</string>
+    <string name="monitor_open_action">سيشن مانيٽر</string>
+    <string name="monitor_limitation">هي مانيٽر هن ايپ پاران ٺاهيل سيشن کي رڪارڊ ڪري ٿو، بشمول TotalCaptureResult، جزوي نتيجا ۽ ڪال بڪ.Android هڪ ايپ کي اجازت نٿو ڏئي ته ڪئپچر جي درخواستن جو مشاهدو ڪرڻ لاءِ ٻئي پروسيس ذريعي موڪليا وڃن جهڙوڪ اسٽاڪ ڪيمرا، تنهنڪري هتي ڪا به اسٽاڪ درخواست جا قدر ظاهر نه ٿي سگهن.</string>
+    <string name="monitor_label">سيشن ليبل</string>
+    <string name="monitor_open_camera">کليل ڪئميرا</string>
+    <string name="monitor_close_camera">ڪئميرا بند ڪريو</string>
+    <string name="monitor_start_recording">رڪارڊنگ شروع ڪريو</string>
+    <string name="monitor_import_dump">ڊمپسي درآمد ڪريو</string>
+    <string name="monitor_imported_ids">وينڊر id درآمد ٿيل: %1$d</string>
+    <string name="monitor_status">حيثيت</string>
+    <string name="monitor_frames_seen">فريم ڏٺو</string>
+    <string name="monitor_frames_recorded">رڪارڊ ٿيل فريم</string>
+    <string name="monitor_captures">قبضو ڪري ٿو</string>
+    <string name="monitor_vendor_request_keys">وينڊر جي درخواست ڪنجيون، آخري فريم</string>
+    <string name="monitor_vendor_result_keys">وڪڻندڙ نتيجن جي ڪنجي، آخري فريم</string>
+    <string name="monitor_no_sessions">اڃان تائين ڪوبه سيشن رڪارڊ نه ڪيو ويو آهي.</string>
+    <string name="monitor_session_summary">%1$s · %2$d فريم · %3$d ڪيپچر</string>
+    <string name="monitor_export_json">JSON برآمد ڪريو</string>
+    <string name="monitor_export_csv">CSV برآمد ڪريو</string>
+    <string name="monitor_export_comparison">ايڪسپورٽ موازنہ</string>
+    <string name="monitor_comparison_none">%1$s جي خلاف ڪوبه فرق نه ڏٺو ويو.</string>
+    <string name="monitor_events">واقعا</string>
+    <string name="monitor_no_events">في الحال ڪوبه واقعو.</string>
+</resources>

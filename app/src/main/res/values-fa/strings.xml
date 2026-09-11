@@ -1,1 +1,135 @@
-<resources></resources>
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="permission_title">مجوز دوربین</string>
+    <string name="permission_message">Camera2 Inspector از CAMERA اجازه درخواست می کند تا CameraManager را جستجو کند و ویژگی های دوربین دستگاه را بخواند.این برنامه فقط خواندنی است: دوربین را باز نمی کند، CaptureRequests ارسال نمی کند، یا تنظیمات را تغییر نمی دهد.</string>
+    <string name="permission_denied">اجازه رد شد.می‌توانید دوباره امتحان کنید یا آن را در تنظیمات برنامه اعطا کنید.</string>
+    <string name="scan_title">در حال اسکن دوربین 2…</string>
+    <string name="scan_status_preparing">در حال آماده سازی اسکن…</string>
+    <string name="scan_status_camera">در حال تجزیه و تحلیل دوربین %1$s…</string>
+    <string name="scan_status_default">جمع آوری ویژگی های دوربین…</string>
+    <string name="scan_failed_title">اسکن انجام نشد</string>
+    <string name="scan_retry">دوباره امتحان کنید</string>
+    <string name="rescan">دوباره اسکن کنید</string>
+    <string name="export">صادرات</string>
+    <string name="export_success">گزارش صادر شد</string>
+    <string name="export_failure">صادر نشد: %1$s</string>
+    <string name="export_open_failed">فایل انتخابی برای نوشتن باز نشد.</string>
+
+    <string name="device_title">دستگاه</string>
+    <string name="field_manufacturer">سازنده</string>
+    <string name="field_model">مدل</string>
+    <string name="field_android">اندروید</string>
+    <string name="field_device">دستگاه</string>
+    <string name="field_hardware">سخت افزار</string>
+    <string name="field_fingerprint">اثر انگشت</string>
+
+    <string name="summary_title">خلاصه</string>
+    <string name="summary_cameras">دوربین ها</string>
+    <string name="summary_vendor_characteristics">مشخصات فروشنده</string>
+    <string name="summary_vendor_capture_request">درخواست جذب فروشنده</string>
+    <string name="summary_vendor_physical_request">درخواست فیزیکی فروشنده</string>
+    <string name="summary_vendor_session_keys">کلیدهای جلسه فروشنده</string>
+    <string name="cameras_title">دوربین‌ها (%1$d)</string>
+    <string name="cameras_empty">دستگاه از طریق CameraManager.cameraIdList هیچ دوربینی را گزارش نکرد.</string>
+    <string name="report_errors_title">خطاهای اسکن جهانی</string>
+
+    
+    <string name="camera_id">شناسه دوربین %1$s</string>
+    <string name="logical_multi_camera">چند دوربین منطقی</string>
+    <string name="physical_ids_short">فیزیکی: %1$s</string>
+    <string name="stat_characteristics">خصوصیات</string>
+    <string name="stat_capture_request">CaptureRequest</string>
+    <string name="stat_capture_result">CaptureResult</string>
+    <string name="stat_physical_request">درخواست فیزیکی</string>
+    <string name="stat_session">جلسه</string>
+    <string name="vendor_count">فروشنده %1$d</string>
+    <string name="badge_vendor">فروشنده</string>
+
+    
+    <string name="back">برگشت</string>
+    <string name="camera_detail_subtitle">%1$s · %2$s</string>
+    <string name="search_placeholder">کلیدهای جستجو (به عنوان مثال hdr)</string>
+    <string name="clear_search">جستجو را پاک کنید</string>
+    <string name="filter_vendor_only">فقط فروشنده</string>
+    <string name="filter_all_namespaces">همه فضاهای نام</string>
+    <string name="keys_result_count">%1$d از %2$d کلید · %3$s</string>
+    <string name="keys_empty">هیچ کلیدی با فیلتر فعلی مطابقت ندارد.</string>
+    <string name="overview_logical_multi_camera">چند دوربین منطقی</string>
+    <string name="overview_physical_ids">شناسه های دوربین فیزیکی</string>
+    <string name="overview_lens_facing">رو به لنز</string>
+    <string name="overview_sensor_orientation">جهت گیری سنسور</string>
+    <string name="value_not_reported">گزارش نشده است</string>
+    <string name="value_none_reported">هیچکدام گزارش نشد</string>
+    <string name="yes">بله</string>
+    <string name="no">خیر</string>
+    <string name="notes_title">یادداشت ها</string>
+    <string name="note_bullet">• %1$s</string>
+    <string name="physical_ids_associated">شناسه‌های فیزیکی مرتبط: %1$s</string>
+    <string name="note_logical_multi_camera">گزارش دستگاه REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA.</string>
+    <string name="note_physical_ids">شناسه‌های دوربین فیزیکی گزارش شده: %1$s.</string>
+    <string name="note_keys_not_reported">%1$s هیچ کلیدی برگرداند.</string>
+    <string name="note_characteristics_unreadable">ویژگی های دوربین برای این دوربین قابل خواندن نیست.</string>
+
+    
+    <string name="availability_characteristics">ارزش خوانده شده از CameraCharacteristics برای این دوربین.یک خطای خواندن در هر کلید گزارش می شود.</string>
+    <string name="availability_capture_request">توسط دستگاه به عنوان یک کلید CaptureRequest در دسترس گزارش شده است.وجود به این معنی نیست که این برنامه مقادیر معتبر را می‌داند و همچنین کلید قابل نوشتن نیست.هیچ CaptureRequest توسط این برنامه ارسال نمی شود.</string>
+    <string name="availability_capture_result">توسط دستگاه به عنوان یک کلید CaptureResult در دسترس گزارش شده است.نتایج خروجی های خط لوله دوربین هستند، نه پیکربندی.</string>
+    <string name="availability_session">توسط دستگاه به عنوان یک کلید جلسه در دسترس گزارش شده است (availableSessionKeys).هیچ جلسه ای ایجاد نمی شود و هیچ مقداری توسط این برنامه اصلاح نمی شود.</string>
+
+    
+    <string name="key_detail_title">جزئیات کلیدی</string>
+    <string name="key_not_found">کلید %1$s در گزارش فعلی این دوربین وجود ندارد.</string>
+    <string name="copy_key_name">نام کلید را کپی کنید</string>
+    <string name="metadata_title">فراداده</string>
+    <string name="field_type">تایپ کنید</string>
+    <string name="field_vendor">فروشنده</string>
+    <string name="field_camera">دوربین</string>
+    <string name="field_physical_ids">شناسه های فیزیکی مرتبط</string>
+    <string name="field_origin">مبدا</string>
+    <string name="vendor_disclaimer">نام یک کلید خاص فروشنده را نشان می دهد.برنامه معنای معنایی به آن اختصاص نمی دهد و نمی داند کدام مقادیر معتبر هستند.</string>
+    <string name="field_exception_type">نوع استثنا</string>
+    <string name="field_message">پیام</string>
+    <string name="value_title">ارزش</string>
+    <string name="value_serialization">سریال سازی: %1$s</string>
+    <string name="copy_value">مقدار کپی</string>
+    <string name="value_unreadable">مقدار برای این کلید قابل خواندن نیست.</string>
+    <string name="raw_tostring_title">toString () اصلی</string>
+    <string name="copy_tostring">toString را کپی کنید</string>
+    <string name="no_message">بدون پیام</string>
+    <string name="key_row_error">خطا: %1$s</string>
+
+    
+    <string name="clip_label_key">کلید بازرس Camera2</string>
+    <string name="clip_label_value">مقدار بازرس Camera2</string>
+    <string name="clip_label_tostring">Camera2 Inspector toString</string>
+
+    
+    <string name="monitor_subtitle">دوربین %1$s</string>
+    <string name="monitor_open_action">مانیتور جلسه</string>
+    <string name="monitor_limitation">این مانیتور جلسات ایجاد شده توسط این برنامه، از جمله TotalCaptureResult، نتایج جزئی و پاسخ‌های تماس را ضبط می‌کند.Android به برنامه اجازه نمی‌دهد CaptureRequest‌های ارسال شده توسط فرآیند دیگری مانند دوربین سهام را مشاهده کند، بنابراین هیچ مقدار درخواست سهام نمی‌تواند در اینجا ظاهر شود.</string>
+    <string name="monitor_label">برچسب جلسه</string>
+    <string name="monitor_label_hint">به عنوان مثال1X، HDR، پرتره</string>
+    <string name="monitor_open_camera">دوربین را باز کنید</string>
+    <string name="monitor_close_camera">دوربین را ببندید</string>
+    <string name="monitor_start_recording">شروع به ضبط کنید</string>
+    <string name="monitor_stop_recording">ضبط را متوقف کنید</string>
+    <string name="monitor_capture">عکسبرداری ثابت</string>
+    <string name="monitor_import_dump">دامپسیس را وارد کنید</string>
+    <string name="monitor_imported_ids">شناسه فروشنده وارد شده: %1$d</string>
+    <string name="monitor_status">وضعیت</string>
+    <string name="monitor_frames_seen">قاب ها دیده می شود</string>
+    <string name="monitor_frames_recorded">فریم های ضبط شده</string>
+    <string name="monitor_captures">ضبط می کند</string>
+    <string name="monitor_vendor_request_keys">کلیدهای درخواست فروشنده، آخرین فریم</string>
+    <string name="monitor_vendor_result_keys">کلیدهای نتیجه فروشنده، آخرین فریم</string>
+    <string name="monitor_last_frame">آخرین فریم</string>
+    <string name="monitor_sessions">جلسات</string>
+    <string name="monitor_no_sessions">هنوز جلسه ای ضبط نشده است.</string>
+    <string name="monitor_session_summary">%1$s · %2$d فریم · %3$d ضبط</string>
+    <string name="monitor_export_json">JSON صادر کنید</string>
+    <string name="monitor_export_csv">صادرات CSV</string>
+    <string name="monitor_export_comparison">مقایسه صادرات</string>
+    <string name="monitor_comparison_changes">%1$d مقدار در مقابل %2$s تغییر می‌کند</string>
+    <string name="monitor_comparison_none">هیچ تفاوتی در برابر %1$s مشاهده نشد.</string>
+    <string name="monitor_events">رویدادها</string>
+    <string name="monitor_no_events">هنوز هیچ رویدادی وجود ندارد.</string>
+</resources>

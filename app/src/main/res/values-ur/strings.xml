@@ -1,1 +1,143 @@
-<resources></resources>
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="permission_message">کیمرہ 2 انسپکٹر کیمرہ مینیجر سے استفسار کرنے اور ڈیوائس کے کیمرہ کی خصوصیات کو پڑھنے کے لیے کیمرہ کی اجازت کی درخواست کرتا ہے۔ایپ صرف پڑھنے کے لیے ہے: یہ کیمرہ نہیں کھولتی، نہ ہی CaptureRequests بھیجتی ہے، یا ترتیبات کو تبدیل نہیں کرتی ہے۔</string>
+    <string name="permission_grant">اجازت دیں۔</string>
+    <string name="permission_open_settings">ایپ کی ترتیبات کھولیں۔</string>
+
+    
+    <string name="home_subtitle_fallback">Camera2 کی تشخیص (صرف پڑھنے کے لیے)</string>
+    <string name="scan_title">سکیننگ کیمرا 2…</string>
+    <string name="scan_status_preparing">اسکین کی تیاری کر رہا ہے…</string>
+    <string name="scan_status_camera">کیمرے کا تجزیہ کیا جا رہا ہے %1$s…</string>
+    <string name="scan_status_default">کیمرے کی خصوصیات کو جمع کیا جا رہا ہے…</string>
+    <string name="scan_failed_title">اسکین ناکام ہوگیا۔</string>
+    <string name="scan_retry">دوبارہ کوشش کریں۔</string>
+    <string name="rescan">دوبارہ اسکین کریں۔</string>
+    <string name="export">برآمد کریں۔</string>
+    <string name="export_success">رپورٹ برآمد۔</string>
+    <string name="export_failure">ایکسپورٹ ناکام ہو گیا: %1$s</string>
+    <string name="export_open_failed">لکھنے کے لیے منتخب فائل کو نہیں کھول سکا۔</string>
+
+    <string name="device_title">ڈیوائس</string>
+    <string name="field_manufacturer">کارخانہ دار</string>
+    <string name="field_model">ماڈل</string>
+    <string name="field_android">اینڈرائیڈ</string>
+    <string name="field_device">ڈیوائس</string>
+    <string name="field_product">پروڈکٹ</string>
+    <string name="field_fingerprint">فنگر پرنٹ</string>
+
+    <string name="summary_title">خلاصہ</string>
+    <string name="summary_cameras">کیمرے</string>
+    <string name="summary_vendor_characteristics">فروش کی خصوصیات</string>
+    <string name="summary_vendor_capture_request">وینڈر کیپچر کی درخواست</string>
+    <string name="summary_vendor_capture_result">وینڈر کیپچر کا نتیجہ</string>
+    <string name="summary_vendor_physical_request">وینڈر کی جسمانی درخواست</string>
+    <string name="summary_vendor_session_keys">وینڈر سیشن کیز</string>
+    <string name="summary_totals">کل: %1$d خصوصیات · %2$d CaptureRequest · %3$d CaptureResult · %4$d جسمانی درخواست · %5$d سیشن</string>
+
+    <string name="cameras_title">کیمرے (%1$d)</string>
+    <string name="cameras_empty">ڈیوائس نے CameraManager.cameraIdList کے ذریعے کسی کیمرے کی اطلاع نہیں دی۔</string>
+    <string name="report_errors_title">عالمی اسکین کی غلطیاں</string>
+
+    
+    <string name="camera_id">کیمرہ ID %1$s</string>
+    <string name="logical_multi_camera">منطقی ملٹی کیمرہ</string>
+    <string name="physical_ids_short">جسمانی: %1$s</string>
+    <string name="stat_characteristics">خصوصیات</string>
+    <string name="stat_capture_request">کیپچر کی درخواست</string>
+    <string name="stat_capture_result">کیپچر رزلٹ</string>
+    <string name="stat_physical_request">جسمانی درخواست</string>
+    <string name="stat_session">سیشن</string>
+    <string name="vendor_count">وینڈر %1$d</string>
+    <string name="badge_vendor">فروش</string>
+
+    
+    <string name="back">پیچھے</string>
+    <string name="camera_detail_subtitle">%1$s · %2$s</string>
+    <string name="search_placeholder">تلاش کیز (جیسے ایچ ڈی آر)</string>
+    <string name="clear_search">تلاش صاف کریں۔</string>
+    <string name="filter_vendor_only">صرف فروش</string>
+    <string name="filter_all_namespaces">تمام نام کی جگہیں۔</string>
+    <string name="keys_result_count">%1$d از %2$d کلیدیں · %3$s</string>
+    <string name="keys_empty">کوئی کلید موجودہ فلٹر سے مماثل نہیں ہے۔</string>
+    <string name="overview_title">جائزہ</string>
+    <string name="overview_logical_multi_camera">منطقی ملٹی کیمرہ</string>
+    <string name="overview_physical_ids">فزیکل کیمرہ آئی ڈیز</string>
+    <string name="overview_hardware_level">ہارڈ ویئر کی سطح</string>
+    <string name="overview_lens_facing">عینک کا سامنا</string>
+    <string name="overview_sensor_orientation">سینسر واقفیت</string>
+    <string name="value_none_reported">کسی نے اطلاع نہیں دی۔</string>
+    <string name="yes">جی ہاں</string>
+    <string name="no">نہیں</string>
+    <string name="notes_title">نوٹس</string>
+    <string name="physical_ids_associated">وابستہ جسمانی IDs: %1$s</string>
+    <string name="physical_ids_not_reported">اس کیمرہ کے ذریعہ جسمانی IDs کی اطلاع نہیں دی گئی ہے۔</string>
+
+    
+    <string name="note_logical_multi_camera">ڈیوائس کی رپورٹس REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA۔</string>
+    <string name="note_keys_not_reported">%1$s نے کوئی کلید واپس نہیں کی۔</string>
+    <string name="note_characteristics_unreadable">اس کیمرے کے لیے کیمرہ کی خصوصیات کو پڑھا نہیں جا سکا۔</string>
+
+    
+    <string name="availability_characteristics">اس کیمرے کے لیے کیمرہ کی خصوصیات سے پڑھی گئی قدر۔فی کلید پڑھنے کی غلطی کی اطلاع دی جاتی ہے۔</string>
+    <string name="availability_capture_result">ڈیوائس کے ذریعہ ایک دستیاب CaptureResult کلید کے طور پر اطلاع دی گئی۔نتائج کیمرہ پائپ لائن کے آؤٹ پٹ ہیں، کنفیگریشن نہیں۔</string>
+    <string name="availability_session">ڈیوائس کے ذریعہ ایک دستیاب سیشن کلید (دستیاب سیشن کیز) کے طور پر رپورٹ کیا گیا ہے۔اس ایپ کے ذریعہ کوئی سیشن نہیں بنایا گیا ہے اور نہ ہی کوئی قدر تبدیل کی گئی ہے۔</string>
+
+    
+    <string name="key_detail_title">کلیدی تفصیل</string>
+    <string name="key_not_found">اس کیمرے کی موجودہ رپورٹ میں کلید %1$s موجود نہیں ہے۔</string>
+    <string name="copy_key_name">کلیدی نام کاپی کریں۔</string>
+    <string name="metadata_title">میٹا ڈیٹا</string>
+    <string name="field_type_source">ماخذ ٹائپ کریں۔</string>
+    <string name="field_category">زمرہ</string>
+    <string name="field_vendor">فروش</string>
+    <string name="field_namespace">نام کی جگہ</string>
+    <string name="field_physical_ids">وابستہ جسمانی IDs</string>
+    <string name="field_origin">اصل</string>
+    <string name="availability_title">دستیابی</string>
+    <string name="vendor_disclaimer">نام ایک وینڈر مخصوص کلید کی تجویز کرتا ہے۔ایپ اسے معنوی معنی تفویض نہیں کرتی ہے اور یہ نہیں جانتی ہے کہ کون سی اقدار درست ہیں۔</string>
+    <string name="error_title">کلید پڑھنے میں خرابی۔</string>
+    <string name="field_exception_type">استثناء کی قسم</string>
+    <string name="field_message">پیغام</string>
+    <string name="value_title">قدر</string>
+    <string name="value_serialization">سیریلائزیشن: %1$s</string>
+    <string name="copy_value">کاپی ویلیو</string>
+    <string name="value_none_for_category">اس زمرے میں کوئی قدر ظاہر نہیں کی گئی ہے۔کلید صرف اس بات کی نشاندہی کرتی ہے کہ آلہ اسے %1$s کے لیے دستیاب ہونے کی اطلاع دیتا ہے۔</string>
+    <string name="value_unreadable">اس کلید کے لیے قدر پڑھی نہیں جا سکتی۔</string>
+    <string name="raw_tostring_title">اصل ٹو سٹرنگ()</string>
+    <string name="copy_tostring">اسٹرنگ میں کاپی کریں۔</string>
+    <string name="no_message">کوئی پیغام نہیں</string>
+    <string name="key_row_error">خرابی: %1$s</string>
+
+    
+    <string name="clip_label_key">کیمرہ 2 انسپکٹر کلید</string>
+    <string name="clip_label_value">کیمرہ 2 انسپکٹر ویلیو</string>
+    <string name="clip_label_tostring">کیمرہ 2 انسپکٹر ٹو سٹرنگ</string>
+
+    
+    <string name="monitor_title">سیشن مانیٹر</string>
+    <string name="monitor_subtitle">کیمرا %1$s</string>
+    <string name="monitor_open_action">سیشن مانیٹر</string>
+    <string name="monitor_limitation">یہ مانیٹر اس ایپ کے ذریعہ بنائے گئے سیشنز کو ریکارڈ کرتا ہے، بشمول TotalCaptureResult، جزوی نتائج اور کال بیکس۔اینڈروئیڈ کسی ایپ کو اسٹاک کیمرہ جیسے دوسرے عمل کے ذریعے بھیجی گئی CaptureRequests کا مشاہدہ کرنے کی اجازت نہیں دیتا، اس لیے یہاں اسٹاک کی درخواست کی کوئی قدر ظاہر نہیں ہو سکتی۔</string>
+    <string name="monitor_label">سیشن لیبل</string>
+    <string name="monitor_label_hint">جیسے1X، HDR، پورٹریٹ</string>
+    <string name="monitor_open_camera">کیمرہ کھولیں۔</string>
+    <string name="monitor_close_camera">کیمرہ بند کریں۔</string>
+    <string name="monitor_start_recording">ریکارڈنگ شروع کریں۔</string>
+    <string name="monitor_stop_recording">ریکارڈنگ بند کرو</string>
+    <string name="monitor_capture">ابھی بھی پکڑو</string>
+    <string name="monitor_import_dump">ڈمپسی درآمد کریں۔</string>
+    <string name="monitor_status">حیثیت</string>
+    <string name="monitor_frames_seen">فریم دیکھے گئے۔</string>
+    <string name="monitor_captures">پکڑتا ہے۔</string>
+    <string name="monitor_vendor_request_keys">وینڈر کی درخواست کی چابیاں، آخری فریم</string>
+    <string name="monitor_last_frame">آخری فریم</string>
+    <string name="monitor_sessions">سیشنز</string>
+    <string name="monitor_no_sessions">ابھی تک کوئی سیشن ریکارڈ نہیں ہوا۔</string>
+    <string name="monitor_session_summary">%1$s · %2$d فریمز · %3$d کیپچرز</string>
+    <string name="monitor_export_json">JSON برآمد کریں۔</string>
+    <string name="monitor_export_csv">CSV برآمد کریں۔</string>
+    <string name="monitor_comparison_changes">%1$d قدر میں تبدیلی بمقابلہ %2$s</string>
+    <string name="monitor_comparison_none">%1$s کے خلاف کوئی فرق نہیں دیکھا گیا۔</string>
+    <string name="monitor_events">واقعات</string>
+    <string name="monitor_no_events">ابھی تک کوئی واقعات نہیں ہیں۔</string>
+</resources>
