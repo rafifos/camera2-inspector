@@ -1,1 +1,141 @@
-<resources></resources>
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="app_name">کیمره 2 انسپکټر</string>
+
+    
+    <string name="permission_title">د کیمرې اجازه</string>
+    <string name="permission_message">د کیمرې 2 انسپکټر د کیمرې مدیر څخه پوښتنې کولو او د وسیلې کیمرې ځانګړتیاوې لوستلو لپاره د کیمرې اجازې غوښتنه کوي.ایپ یوازې د لوستلو وړ دی: دا کیمره نه خلاصوي ، د CaptureRequests لیږي ، یا تنظیمات نه بدلوي.</string>
+    <string name="permission_denied">اجازه رد شوه.تاسو کولی شئ بیا هڅه وکړئ یا د اپلیکیشن تنظیماتو کې یې ورکړئ.</string>
+    <string name="permission_grant">اجازه راکړئ</string>
+    <string name="permission_open_settings">د اپلیکیشن تنظیمات خلاص کړئ</string>
+
+    
+    <string name="home_subtitle_fallback">د کیمرې 2 تشخیص (یوازې لوستل)</string>
+    <string name="scan_title">کیمره سکین کول 2…</string>
+    <string name="scan_status_preparing">سکین چمتو کول…</string>
+    <string name="scan_status_camera">د کیمرې تحلیل %1$s…</string>
+    <string name="scan_status_default">د کیمرې ځانګړتیاوې راټولول…</string>
+    <string name="scan_failed_title">سکین ناکام شو</string>
+    <string name="scan_retry">بیا هڅه وکړئ</string>
+    <string name="rescan">بیا سکین کړئ</string>
+    <string name="export">صادرول</string>
+    <string name="export_success">راپور صادر شو.</string>
+    <string name="export_failure">صادرات ناکام شول: %1$s</string>
+    <string name="export_open_failed">د لیکلو لپاره ټاکل شوې فایل نشي خلاصولی.</string>
+
+    <string name="device_title">وسیله</string>
+    <string name="field_manufacturer">جوړونکی</string>
+    <string name="field_model">ماډل</string>
+    <string name="field_android">Android</string>
+    <string name="field_device">وسیله</string>
+    <string name="field_product">محصول</string>
+    <string name="field_hardware">هارډویر</string>
+    <string name="field_fingerprint">د ګوتو نښې</string>
+
+    <string name="summary_title">لنډیز</string>
+    <string name="summary_cameras">کیمرې</string>
+    <string name="summary_vendor_characteristics">د پلورونکي ځانګړتیاوې</string>
+    <string name="summary_vendor_capture_request">د پلورونکي د نیولو غوښتنه</string>
+    <string name="summary_vendor_capture_result">د پلورونکي نیول پایله</string>
+    <string name="summary_vendor_physical_request">د پلورونکي فزیکي غوښتنه</string>
+    <string name="summary_vendor_session_keys">د پلورونکي سیشن کیلي</string>
+    <string name="summary_totals">ټولټال: %1$d ځانګړتیاوې · %2$d CaptureRequest · %3$d CaptureResult · %4$d فزیکي غوښتنه · %5$d ناسته</string>
+
+    <string name="cameras_title">کیمرې (%1$d)</string>
+    <string name="cameras_empty">وسیله د CameraManager.cameraIdList له لارې هیڅ کیمرې نه راپور کړې.</string>
+    <string name="physical_ids_short">فزیکي: %1$s</string>
+    <string name="stat_capture_request">CaptureRequest</string>
+    <string name="stat_capture_result">CaptureResult</string>
+    <string name="stat_physical_request">فزیکي غوښتنه</string>
+    <string name="vendor_count">پلورونکی %1$d</string>
+    <string name="badge_vendor">پلورونکی</string>
+
+    
+    <string name="camera_detail_subtitle">%1$s · %2$s</string>
+    <string name="search_placeholder">د لټون کیلي (د مثال په توګه hdr)</string>
+    <string name="clear_search">پاک لټون</string>
+    <string name="filter_vendor_only">یوازې پلورونکی</string>
+    <string name="filter_all_namespaces">ټول نوم ځایونه</string>
+    <string name="keys_result_count">%1$d د %2$d کلیدونه · %3$s</string>
+    <string name="keys_empty">هیڅ کیلي د اوسني فلټر سره سمون نلري.</string>
+    <string name="overview_title">کتنه</string>
+    <string name="overview_logical_multi_camera">منطقي ملټي کیمره</string>
+    <string name="overview_physical_ids">د فزیکي کیمرې IDs</string>
+    <string name="overview_lens_facing">لینز مخامخ</string>
+    <string name="overview_sensor_orientation">د سینسر لوری</string>
+    <string name="value_not_reported">راپور نه دی ورکړل شوی</string>
+    <string name="value_none_reported">هیڅ راپور نه دی ورکړل شوی</string>
+    <string name="no">نه</string>
+    <string name="notes_title">یادښتونه</string>
+    <string name="note_bullet">• %1$s</string>
+    <string name="physical_ids_associated">مربوط فزیکي IDs: %1$s</string>
+    <string name="physical_ids_not_reported">فزیکي IDs د دې کیمرې لخوا ندي راپور شوي</string>
+
+    
+    <string name="note_logical_multi_camera">وسیله راپور ورکوي REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA.</string>
+    <string name="note_physical_ids">د فزیکي کیمرې IDs راپور شوي: %1$s.</string>
+    <string name="note_keys_not_reported">%1$s هیڅ کیلي نه دي راګرځولي.</string>
+    <string name="note_characteristics_unreadable">د کیمرې ځانګړتیاوې د دې کیمرې لپاره لوستل کیدی نشي.</string>
+
+    
+    <string name="availability_characteristics">د دې کیمرې لپاره د کیمرې ځانګړتیاو څخه لوستل شوي ارزښت.د لوستلو تېروتنه په هر کلی کې راپور شوې.</string>
+    <string name="availability_capture_request">د وسیلې لخوا د موجود CaptureRequest کیلي په توګه راپور شوی.شتون پدې معنی ندي چې دا ایپ معتبر ارزښتونه پیژني، او نه دا چې کیلي د لیکلو وړ ده؛د دې اپلیکیشن لخوا هیڅ CaptureRequest نه لیږل کیږي.</string>
+    <string name="availability_capture_result">د وسیلې لخوا د موجود CaptureResult کیلي په توګه راپور شوی.پایلې د کیمرې پایپ لاین پایلې دي، نه ترتیب.</string>
+    <string name="availability_physical_request">د موجود فزیکي کیمرې CaptureRequest کلید په توګه د وسیلې لخوا راپور شوی.دا د دې منطقي کیمرې سره تړلې فزیکي کیمرې IDs باندې پلي کیږي ، کله چې وسیله دوی ته راپور ورکوي.</string>
+    <string name="availability_session">د وسیلې لخوا د موجود سیشن کیلي (availableSessionKeys) په توګه راپور شوی.د دې اپلیکیشن لخوا هیڅ ناسته نه رامینځته کیږي او هیڅ ارزښت نه بدلیږي.</string>
+
+    
+    <string name="key_detail_title">کلیدي توضیحات</string>
+    <string name="key_not_found">د دې کیمرې لپاره په اوسني راپور کې کلیدي %1$s شتون نلري.</string>
+    <string name="copy_key_name">د کلیدي نوم کاپي کړئ</string>
+    <string name="metadata_title">میټاډاټا</string>
+    <string name="field_type">ډول</string>
+    <string name="field_type_source">د سرچینې ډول</string>
+    <string name="field_category">کټګوري</string>
+    <string name="field_vendor">پلورونکی</string>
+    <string name="field_namespace">نوم ځای</string>
+    <string name="field_origin">اصل</string>
+    <string name="vendor_disclaimer">نوم د پلورونکي ځانګړي کیلي وړاندیز کوي.ایپ دې ته سیمانټیک معنی نه ورکوي او نه پوهیږي چې کوم ارزښتونه معتبر دي.</string>
+    <string name="error_title">د کیلي لوستلو تېروتنه</string>
+    <string name="field_exception_type">د استثنا ډول</string>
+    <string name="field_message">پیغام</string>
+    <string name="value_title">ارزښت</string>
+    <string name="value_serialization">لړۍ کول: %1$s</string>
+    <string name="value_none_for_category">په دې کټګورۍ کې هیڅ ارزښت ندی څرګند شوی.کیلي یوازې دا په ګوته کوي چې وسیله راپور ورکوي چې دا د %1$s لپاره شتون لري.</string>
+    <string name="value_unreadable">ارزښت د دې کلیمې لپاره لوستل کیدی نشي.</string>
+    <string name="raw_tostring_title">اصلي ته String()</string>
+    <string name="copy_tostring">سټرینګ ته کاپي کړئ</string>
+    <string name="no_message">هیڅ پیغام نشته</string>
+    <string name="key_row_error">تېروتنه: %1$s</string>
+
+    
+    <string name="clip_label_key">د کیمرې 2 انسپکټر کیلي</string>
+    <string name="clip_label_value">د کیمرې 2 انسپکټر ارزښت</string>
+    <string name="clip_label_tostring">کیمره 2 انسپکټر د سټینګ لپاره</string>
+
+    
+    <string name="monitor_title">د ناستې څارنه</string>
+    <string name="monitor_subtitle">کیمره %1$s</string>
+    <string name="monitor_open_action">د ناستې څارنه</string>
+    <string name="monitor_limitation">دا نظارت د دې اپلیکیشن لخوا رامینځته شوي ناستې ثبتوي ، پشمول د TotalCaptureResult ، جزوي پایلې او کال بیکونه.Android یو اپلیکیشن ته اجازه نه ورکوي چې د بلې پروسې لخوا لیږل شوي CaptureRequests مشاهده کړي لکه د سټاک کیمرې، نو د سټاک غوښتنې ارزښتونه دلته څرګند نشي.</string>
+    <string name="monitor_label">د سیشن لیبل</string>
+    <string name="monitor_open_camera">کیمره خلاص کړه</string>
+    <string name="monitor_close_camera">کیمره بنده کړه</string>
+    <string name="monitor_start_recording">ثبت کول پیل کړئ</string>
+    <string name="monitor_capture">بیا هم نیول</string>
+    <string name="monitor_import_dump">ډمپسي وارد کړئ</string>
+    <string name="monitor_imported_ids">د پلورونکي id وارد شوي: %1$d</string>
+    <string name="monitor_status">حالت</string>
+    <string name="monitor_frames_recorded">چوکاټونه ثبت شوي</string>
+    <string name="monitor_captures">نیول</string>
+    <string name="monitor_vendor_request_keys">د پلورونکي غوښتنې کیلي، وروستی چوکاټ</string>
+    <string name="monitor_last_frame">وروستی چوکاټ</string>
+    <string name="monitor_sessions">غونډې</string>
+    <string name="monitor_no_sessions">تر اوسه کومه غونډه نه ده ثبت شوې.</string>
+    <string name="monitor_session_summary">%1$s · %2$d چوکاټونه · %3$d نیول</string>
+    <string name="monitor_export_json">JSON صادر کړئ</string>
+    <string name="monitor_export_csv">CSV صادر کړئ</string>
+    <string name="monitor_export_comparison">د صادراتو پرتله کول</string>
+    <string name="monitor_comparison_none">د %1$s په وړاندې هیڅ توپیر نه لیدل کیږي.</string>
+    <string name="monitor_events">پیښې</string>
+    <string name="monitor_no_events">تراوسه هیڅ پیښه نشته.</string>
+</resources>

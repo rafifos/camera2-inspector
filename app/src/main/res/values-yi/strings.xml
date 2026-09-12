@@ -1,1 +1,150 @@
-<resources></resources>
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="app_name">קאַמעראַ 2 ינספּעקטאָר</string>
+
+    
+    <string name="permission_title">אַפּאַראַט דערלויבעניש</string>
+    <string name="permission_message">Camera2 Inspector ריקוועס די CAMERA דערלויבעניש צו אָנפרעג קאַמעראַ מאַנאַגער און לייענען די קאַמעראַ קעראַקטעריסטיקס פון די מיטל.די אַפּ איז בלויז לייענען: עס קען נישט עפענען די אַפּאַראַט, שיקן קאַפּטורע רעקוועסטס אָדער טוישן סעטטינגס.</string>
+    <string name="permission_denied">די דערלויבעניש איז געלייקנט.איר קענען פּרובירן ווידער אָדער געבן עס אין די אַפּ סעטטינגס.</string>
+    <string name="permission_grant">שענקען דערלויבעניש</string>
+    <string name="home_subtitle_fallback">קאַמעראַ 2 דיאַגנאָסטיקס (לייענען-בלויז)</string>
+    <string name="scan_title">סקאַנינג קאַמעראַ 2…</string>
+    <string name="scan_status_preparing">פּריפּערינג יבערקוקן…</string>
+    <string name="scan_status_camera">אַנאַליזינג אַפּאַראַט %1$s…</string>
+    <string name="scan_status_default">קאַלעקטינג אַפּאַראַט קעראַקטעריסטיקס…</string>
+    <string name="scan_failed_title">סקאַן ניט אַנדערש</string>
+    <string name="scan_retry">פּרוּווט ווידער</string>
+    <string name="rescan">יבערקוקן ווידער</string>
+    <string name="export">עקספּאָרט</string>
+    <string name="export_success">באריכט עקספּאָרטירט.</string>
+    <string name="export_failure">עקספּאָרט ניט אַנדערש: %1$s</string>
+    <string name="export_open_failed">קען נישט עפענען די אויסגעקליבן טעקע פֿאַר שרייבן.</string>
+
+    <string name="device_title">מיטל</string>
+    <string name="field_manufacturer">פאַבריקאַנט</string>
+    <string name="field_model">מאָדעל</string>
+    <string name="field_android">אַנדרויד</string>
+    <string name="field_device">מיטל</string>
+    <string name="field_product">פּראָדוקט</string>
+    <string name="field_hardware">ייַזנוואַרג</string>
+    <string name="field_fingerprint">פינגערפּרינט</string>
+
+    <string name="summary_title">קיצער</string>
+    <string name="summary_cameras">קאַמעראַס</string>
+    <string name="summary_vendor_characteristics">פאַרקויפער טשאַראַקטעריסטיקס</string>
+    <string name="summary_vendor_capture_request">פאַרקויפער קאַפּטורע רעקוועסט</string>
+    <string name="summary_vendor_capture_result">פאַרקויפער CaptureResult</string>
+    <string name="summary_vendor_physical_request">פאַרקויפער פיזיש בעטן</string>
+    <string name="summary_vendor_session_keys">פאַרקויפער סעסיע שליסלען</string>
+    <string name="summary_totals">גאַנץ: %1$d קעראַקטעריסטיקס · %2$d קאַפּטורע רעקוועסט · %3$d קאַפּטורע רעזולטאַט · %4$d פיזיש בעטן · %5$d סעסיע</string>
+
+    <string name="cameras_title">קאַמעראַס (%1$d)</string>
+    <string name="cameras_empty">דער מיטל האָט נישט געמאלדן קיין קאַמעראַס דורך CameraManager.cameraIdList.</string>
+    <string name="report_errors_title">גלאבאלע יבערקוקן ערראָרס</string>
+
+    
+    <string name="camera_id">אַפּאַראַט ID %1$s</string>
+    <string name="logical_multi_camera">לאַדזשיקאַל מולטי-אַפּאַראַט</string>
+    <string name="physical_ids_short">פיזיש: %1$s</string>
+    <string name="stat_characteristics">קעראַקטעריסטיקס</string>
+    <string name="stat_capture_request">CaptureRequest</string>
+    <string name="stat_capture_result">CaptureResult</string>
+    <string name="stat_physical_request">גשמיות בעטן</string>
+    <string name="stat_session">סעסיע</string>
+    <string name="vendor_count">פאַרקויפער %1$d</string>
+    <string name="badge_vendor">פאַרקויפער</string>
+
+    
+    <string name="back">צוריק</string>
+    <string name="camera_detail_subtitle">%1$s · %2$s</string>
+    <string name="search_placeholder">זוכן שליסלען (למשל hdr)</string>
+    <string name="clear_search">קלאָר זוכן</string>
+    <string name="filter_vendor_only">בלויז פאַרקויפער</string>
+    <string name="filter_all_namespaces">אַלע נאָמען ספּייסאַז</string>
+    <string name="keys_result_count">%1$d פון %2$d שליסלען · %3$s</string>
+    <string name="keys_empty">קיין שליסלען גלייַכן דעם קראַנט פילטער.</string>
+    <string name="overview_title">איבערבליק</string>
+    <string name="overview_logical_multi_camera">לאַדזשיקאַל מולטי-אַפּאַראַט</string>
+    <string name="overview_physical_ids">גשמיות אַפּאַראַט IDs</string>
+    <string name="overview_hardware_level">האַרדוואַרע מדרגה</string>
+    <string name="overview_lens_facing">לענס פייסינג</string>
+    <string name="overview_sensor_orientation">סענסאָר אָריענטירונג</string>
+    <string name="value_not_reported">ניט געמאלדן</string>
+    <string name="value_none_reported">קיינער געמאלדן</string>
+    <string name="yes">יא</string>
+    <string name="no">ניין</string>
+    <string name="notes_title">הערות</string>
+    <string name="note_bullet">• %1$s</string>
+    <string name="physical_ids_associated">פֿאַרבונדן פיזיש IDs: %1$s</string>
+    <string name="physical_ids_not_reported">פיזיש IDs זענען נישט רעפּאָרטעד דורך דעם אַפּאַראַט</string>
+
+    
+    <string name="note_logical_multi_camera">מיטל ריפּאָרץ REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA.</string>
+    <string name="note_physical_ids">פיזיש אַפּאַראַט IDs געמאלדן: %1$s.</string>
+    <string name="note_keys_not_reported">%1$s האָט ניט אומגעקערט קיין שליסלען.</string>
+    <string name="note_characteristics_unreadable">אַפּאַראַט קעראַקטעריסטיקס קען ניט זיין לייענען פֿאַר דעם אַפּאַראַט.</string>
+
+    
+    <string name="availability_characteristics">ווערט לייענען פֿון קאַמעראַ טשאַראַקטעריסטיקס פֿאַר דעם אַפּאַראַט.א לייענען טעות איז געמאלדן פּער שליסל.</string>
+    <string name="availability_capture_request">רעפּאָרטעד דורך די מיטל ווי אַ בנימצא CaptureRequest שליסל.דער בייַזייַן טוט נישט מיינען אַז די אַפּ ווייסט גילטיק וואַלועס, אדער אַז דער שליסל איז רייטאַבאַל;קיין CaptureRequest איז געשיקט דורך דעם אַפּ.</string>
+    <string name="availability_capture_result">רעפּאָרטעד דורך די מיטל ווי אַ בנימצא CaptureResult שליסל.רעזולטאַטן זענען אַוטפּוץ פון די אַפּאַראַט רערנ - ליניע, נישט קאַנפיגיעריישאַן.</string>
+    <string name="availability_physical_request">רעפּאָרטעד דורך די מיטל ווי אַ בנימצא גשמיות אַפּאַראַט קאַפּטורעקוועסט שליסל.עס אַפּלייז צו די גשמיות אַפּאַראַט IDs פֿאַרבונדן מיט דעם לאַדזשיקאַל אַפּאַראַט ווען די מיטל ריפּאָרץ זיי.</string>
+    <string name="availability_session">רעפּאָרטעד דורך די מיטל ווי אַ בנימצא סעסיע שליסל (אַוואַילאַבלע סעשאַן שליסלען).קיין סעסיע איז באשאפן און קיין ווערט איז מאַדאַפייד דורך דעם אַפּ.</string>
+
+    
+    <string name="key_detail_title">שליסל דעטאַל</string>
+    <string name="key_not_found">דער שליסל %1$s איז נישט פאָרשטעלן אין דעם קראַנט באַריכט פֿאַר דעם אַפּאַראַט.</string>
+    <string name="metadata_title">מעטאַדאַטאַ</string>
+    <string name="field_type_source">טיפּ מקור</string>
+    <string name="field_category">קאַטעגאָריע</string>
+    <string name="field_vendor">פאַרקויפער</string>
+    <string name="field_namespace">נאַמעספּאַסע</string>
+    <string name="field_camera">אַפּאַראַט</string>
+    <string name="field_physical_ids">פֿאַרבונדן פיזיש IDs</string>
+    <string name="field_origin">אָריגין</string>
+    <string name="availability_title">אַוואַילאַביליטי</string>
+    <string name="vendor_disclaimer">דער נאָמען סאַגדזשעסץ אַ פאַרקויפער-ספּעציפיש שליסל.די אַפּ טוט נישט באַשטימען סעמאַנטיק טייַטש צו עס און קען נישט וויסן וואָס וואַלועס זענען גילטיק.</string>
+    <string name="field_exception_type">אויסנאַם טיפּ</string>
+    <string name="value_title">ווערט</string>
+    <string name="value_serialization">סיריאַליזאַטיאָן: %1$s</string>
+    <string name="copy_value">קאָפּי ווערט</string>
+    <string name="value_none_for_category">קיין ווערט איז יקספּאָוזד אין דעם קאַטעגאָריע.דער שליסל בלויז ינדיקייץ אַז די מיטל ריפּאָרץ עס ווי בנימצא פֿאַר %1$s.</string>
+    <string name="raw_tostring_title">אָריגינעל צוסטרינג ()</string>
+    <string name="copy_tostring">קאָפּי צו סטרינג</string>
+    <string name="no_message">קיין אָנזאָג</string>
+    <string name="key_row_error">טעות: %1$s</string>
+
+    
+    <string name="clip_label_key">קאַמעראַ2 ינספּעקטאָר שליסל</string>
+    <string name="clip_label_value">קאַמעראַ2 ינספּעקטאָר ווערט</string>
+    <string name="clip_label_tostring">קאַמעראַ 2 ינספּעקטאָר צו סטרינג</string>
+
+    
+    <string name="monitor_title">סעסיע מאָניטאָר</string>
+    <string name="monitor_subtitle">אַפּאַראַט %1$s</string>
+    <string name="monitor_open_action">סעסיע מאָניטאָר</string>
+    <string name="monitor_limitation">דער מאָניטאָר רעקאָרדירט ​​סעשאַנז באשאפן דורך דעם אַפּ, אַרייַנגערעכנט TotalCaptureResult, פּאַרטיייש רעזולטאַטן און קאַללבאַקקס.אַנדרויד קען נישט לאָזן אַן אַפּ צו אָבסערווירן קאַפּטורע רעקוועסטס געשיקט דורך אן אנדער פּראָצעס אַזאַ ווי די לאַגער אַפּאַראַט, אַזוי קיין וואַלועס פון לאַגער בעטן קענען זיין געוויזן דאָ.</string>
+    <string name="monitor_label">סעסיע פירמע</string>
+    <string name="monitor_label_hint">ע.ג.1X, HDR, פּאָרטרעט</string>
+    <string name="monitor_open_camera">עפענען אַפּאַראַט</string>
+    <string name="monitor_close_camera">נאָענט אַפּאַראַט</string>
+    <string name="monitor_start_recording">אָנהייב רעקאָרדינג</string>
+    <string name="monitor_stop_recording">האַלטן רעקאָרדינג</string>
+    <string name="monitor_capture">כאַפּן נאָך</string>
+    <string name="monitor_import_dump">אַרייַנפיר דומפּסיס</string>
+    <string name="monitor_imported_ids">פאַרקויפער יידס ימפּאָרטיד: %1$d</string>
+    <string name="monitor_status">סטאַטוס</string>
+    <string name="monitor_frames_seen">ראָמען געזען</string>
+    <string name="monitor_frames_recorded">ראָמען רעקאָרדעד</string>
+    <string name="monitor_captures">קאַפּטשערז</string>
+    <string name="monitor_vendor_result_keys">פאַרקויפער רעזולטאַט שליסלען, לעצטע ראַם</string>
+    <string name="monitor_last_frame">לעצטע ראַם</string>
+    <string name="monitor_sessions">סעשאַנז</string>
+    <string name="monitor_no_sessions">קיין סעסיע רעקאָרדעד נאָך.</string>
+    <string name="monitor_export_json">עקספּאָרט דזשסאָן</string>
+    <string name="monitor_export_csv">אַרויספירן קסוו</string>
+    <string name="monitor_export_comparison">אַרויספירן פאַרגלייַך</string>
+    <string name="monitor_comparison_changes">%1$d ווערט ענדערונגען קעגן %2$s</string>
+    <string name="monitor_comparison_none">קיין דיפעראַנסיז באמערקט קעגן %1$s.</string>
+    <string name="monitor_events">געשעענישן</string>
+    <string name="monitor_no_events">נאָך קיין געשעענישן.</string>
+</resources>

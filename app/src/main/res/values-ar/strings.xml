@@ -1,1 +1,144 @@
-<resources></resources>
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="app_name">كاميرا 2 المفتش</string>
+
+    
+    <string name="permission_title">إذن الكاميرا</string>
+    <string name="permission_message">يطلب Camera2 Inspector إذن CAMERA للاستعلام عن CameraManager وقراءة خصائص الكاميرا الخاصة بالجهاز.التطبيق للقراءة فقط: فهو لا يفتح الكاميرا، أو يرسل CaptureRequests، أو يغير الإعدادات.</string>
+    <string name="permission_denied">تم رفض الإذن.يمكنك المحاولة مرة أخرى أو منحها في إعدادات التطبيق.</string>
+    <string name="permission_grant">منح الإذن</string>
+    <string name="permission_open_settings">افتح إعدادات التطبيق</string>
+
+    
+    <string name="home_subtitle_fallback">تشخيصات Camera2 (للقراءة فقط)</string>
+    <string name="scan_title">كاميرا المسح الضوئي 2…</string>
+    <string name="scan_status_preparing">جارٍ تحضير الفحص…</string>
+    <string name="scan_status_camera">جارٍ تحليل الكاميرا %1$s…</string>
+    <string name="scan_status_default">جارٍ جمع خصائص الكاميرا…</string>
+    <string name="scan_failed_title">فشل المسح</string>
+    <string name="scan_retry">حاول ثانية</string>
+    <string name="rescan">مسح مرة أخرى</string>
+    <string name="export">يصدّر</string>
+    <string name="export_success">تم تصدير التقرير.</string>
+    <string name="export_failure">فشل التصدير: %1$s</string>
+    <string name="export_open_failed">لا يمكن فتح الملف المحدد للكتابة.</string>
+
+    <string name="device_title">جهاز</string>
+    <string name="field_manufacturer">الشركة المصنعة</string>
+    <string name="field_model">نموذج</string>
+    <string name="field_android">أندرويد</string>
+    <string name="field_device">جهاز</string>
+    <string name="field_product">منتج</string>
+    <string name="field_hardware">الأجهزة</string>
+    <string name="field_fingerprint">بصمة</string>
+
+    <string name="summary_title">ملخص</string>
+    <string name="summary_cameras">الكاميرات</string>
+    <string name="summary_vendor_characteristics">خصائص البائع</string>
+    <string name="summary_vendor_capture_request">طلب التقاط البائع</string>
+    <string name="summary_vendor_capture_result">نتيجة التقاط البائع</string>
+    <string name="summary_vendor_physical_request">الطلب المادي للمورد</string>
+    <string name="summary_vendor_session_keys">مفاتيح جلسة البائع</string>
+    <string name="summary_totals">الإجماليات: %1$d من الخصائص · %2$d CaptureRequest · %3$d CaptureResult · %4$d طلب فعلي · %5$d جلسة</string>
+
+    <string name="cameras_title">الكاميرات (%1$d)</string>
+    <string name="cameras_empty">لم يبلغ الجهاز عن وجود كاميرات من خلال CameraManager.cameraIdList.</string>
+    <string name="report_errors_title">أخطاء المسح العالمية</string>
+
+    
+    <string name="camera_id">معرف الكاميرا %1$s</string>
+    <string name="logical_multi_camera">كاميرا متعددة منطقية</string>
+    <string name="physical_ids_short">مادي: %1$s</string>
+    <string name="stat_characteristics">صفات</string>
+    <string name="stat_capture_request">طلب الالتقاط</string>
+    <string name="stat_capture_result">CaptureResult</string>
+    <string name="stat_physical_request">الطلب الجسدي</string>
+    <string name="stat_session">حصة</string>
+    <string name="vendor_count">البائع %1$د</string>
+    <string name="badge_vendor">بائع</string>
+
+    
+    <string name="back">خلف</string>
+    <string name="camera_detail_subtitle">%1$s · %2$s</string>
+    <string name="search_placeholder">مفاتيح البحث (مثل HDR)</string>
+    <string name="clear_search">مسح البحث</string>
+    <string name="filter_vendor_only">البائع فقط</string>
+    <string name="filter_all_namespaces">جميع مساحات الأسماء</string>
+    <string name="keys_result_count">%1$d من %2$d مفاتيح · %3$s</string>
+    <string name="keys_empty">لا توجد مفاتيح تتطابق مع عامل التصفية الحالي.</string>
+    <string name="overview_title">ملخص</string>
+    <string name="overview_logical_multi_camera">كاميرا متعددة منطقية</string>
+    <string name="overview_physical_ids">معرفات الكاميرا الفعلية</string>
+    <string name="overview_hardware_level">مستوى الأجهزة</string>
+    <string name="overview_lens_facing">مواجهة العدسة</string>
+    <string name="overview_sensor_orientation">اتجاه الاستشعار</string>
+    <string name="value_not_reported">لم يتم الإبلاغ عنها</string>
+    <string name="value_none_reported">لم يتم الإبلاغ عن أي شيء</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="note_bullet">• %1$s</string>
+    <string name="physical_ids_associated">المعرفات الفعلية المرتبطة: %1$s</string>
+    <string name="physical_ids_not_reported">لم يتم الإبلاغ عن المعرفات الفعلية بواسطة هذه الكاميرا</string>
+
+    
+    <string name="note_logical_multi_camera">تقارير الجهاز REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA.</string>
+    <string name="note_physical_ids">معرفات الكاميرا الفعلية التي تم الإبلاغ عنها: %1$s.</string>
+    <string name="note_keys_not_reported">%1$s لم يُرجع أي مفاتيح.</string>
+    <string name="note_characteristics_unreadable">لا يمكن قراءة خصائص الكاميرا لهذه الكاميرا.</string>
+
+    
+    <string name="availability_characteristics">القيمة المقروءة من خصائص الكاميرا لهذه الكاميرا.يتم الإبلاغ عن خطأ في القراءة لكل مفتاح.</string>
+    <string name="availability_capture_result">تم الإبلاغ عنها بواسطة الجهاز كمفتاح CaptureResult متاح.النتائج هي مخرجات لخط أنابيب الكاميرا، وليس التكوين.</string>
+    <string name="availability_physical_request">تم الإبلاغ عنه بواسطة الجهاز باعتباره مفتاح CaptureRequest للكاميرا الفعلية متاحًا.وينطبق ذلك على معرفات الكاميرا الفعلية المرتبطة بهذه الكاميرا المنطقية، عندما يقوم الجهاز بالإبلاغ عنها.</string>
+    <string name="key_detail_title">التفاصيل الرئيسية</string>
+    <string name="key_not_found">المفتاح %1$s غير موجود في التقرير الحالي لهذه الكاميرا.</string>
+    <string name="copy_key_name">انسخ اسم المفتاح</string>
+    <string name="field_type_source">اكتب المصدر</string>
+    <string name="field_namespace">مساحة الاسم</string>
+    <string name="field_camera">آلة تصوير</string>
+    <string name="field_physical_ids">المعرفات المادية المرتبطة</string>
+    <string name="availability_title">التوفر</string>
+    <string name="vendor_disclaimer">يقترح الاسم مفتاحًا خاصًا بالمورد.لا يعين التطبيق معنى دلاليًا له ولا يعرف القيم الصالحة.</string>
+    <string name="error_title">خطأ في قراءة المفتاح</string>
+    <string name="field_exception_type">نوع الاستثناء</string>
+    <string name="field_message">رسالة</string>
+    <string name="value_title">قيمة</string>
+    <string name="value_serialization">التسلسل: %1$s</string>
+    <string name="copy_value">نسخ القيمة</string>
+    <string name="value_none_for_category">لا يتم عرض أي قيمة في هذه الفئة.يشير المفتاح فقط إلى أن الجهاز يبلغ بأنه متاح لـ %1$s.</string>
+    <string name="value_unreadable">لا يمكن قراءة القيمة لهذا المفتاح.</string>
+    <string name="copy_tostring">نسخ إلى السلسلة</string>
+    <string name="no_message">لا توجد رسالة</string>
+    <string name="key_row_error">خطأ: %1$s</string>
+
+    
+    <string name="clip_label_value">قيمة المفتش Camera2</string>
+    <string name="monitor_title">مراقب الجلسة</string>
+    <string name="monitor_subtitle">الكاميرا %1$s</string>
+    <string name="monitor_open_action">مراقب الجلسة</string>
+    <string name="monitor_limitation">تسجل هذه الشاشة الجلسات التي تم إنشاؤها بواسطة هذا التطبيق، بما في ذلك TotalCaptureResult والنتائج الجزئية وعمليات الاسترجاعات.لا يسمح Android لأي تطبيق بمراقبة طلبات CaptureRequests المرسلة بواسطة عملية أخرى مثل كاميرا المخزون، لذلك لا يمكن أن تظهر قيم طلب المخزون هنا.</string>
+    <string name="monitor_label">تسمية الجلسة</string>
+    <string name="monitor_label_hint">على سبيل المثال1X، HDR، صورة شخصية</string>
+    <string name="monitor_open_camera">افتح الكاميرا</string>
+    <string name="monitor_close_camera">إغلاق الكاميرا</string>
+    <string name="monitor_start_recording">ابدأ التسجيل</string>
+    <string name="monitor_capture">التقط صورًا ثابتة</string>
+    <string name="monitor_import_dump">استيراد dumpsys</string>
+    <string name="monitor_imported_ids">تم استيراد معرفات البائع: %1$d</string>
+    <string name="monitor_status">حالة</string>
+    <string name="monitor_frames_seen">تم رؤية الإطارات</string>
+    <string name="monitor_frames_recorded">تم تسجيل الإطارات</string>
+    <string name="monitor_captures">يلتقط</string>
+    <string name="monitor_vendor_request_keys">مفاتيح طلب البائع، الإطار الأخير</string>
+    <string name="monitor_vendor_result_keys">مفاتيح نتائج البائع، الإطار الأخير</string>
+    <string name="monitor_last_frame">الإطار الأخير</string>
+    <string name="monitor_sessions">الجلسات</string>
+    <string name="monitor_no_sessions">لم يتم تسجيل أي جلسة حتى الآن.</string>
+    <string name="monitor_session_summary">%1$s · %2$d إطار · %3$d لقطة</string>
+    <string name="monitor_export_json">تصدير JSON</string>
+    <string name="monitor_export_csv">تصدير CSV</string>
+    <string name="monitor_export_comparison">مقارنة الصادرات</string>
+    <string name="monitor_comparison_changes">تتغير قيمة %1$d مقابل %2$s</string>
+    <string name="monitor_comparison_none">لم يتم ملاحظة أي فروق مقابل %1$s.</string>
+    <string name="monitor_events">الأحداث</string>
+    <string name="monitor_no_events">لا توجد أحداث حتى الآن.</string>
+</resources>

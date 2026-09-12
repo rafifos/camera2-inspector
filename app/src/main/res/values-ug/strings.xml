@@ -1,1 +1,155 @@
-<resources></resources>
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="app_name">كامېرا 2 تەكشۈرگۈچى</string>
+
+    
+    <string name="permission_title">كامېرا ئىجازەتنامىسى</string>
+    <string name="permission_message">Camera2 تەكشۈرگۈچىسى CAMERA دىن CameraManager دىن سوئال سوراش ۋە ئۈسكۈنىنىڭ كامېرا ئالاھىدىلىكىنى ئوقۇش ئۈچۈن رۇخسەت سورايدۇ.بۇ دېتال پەقەت ئوقۇشقىلا بولىدۇ: ئۇ كامېرانى ئاچمايدۇ ، CaptureRequests ئەۋەتمەيدۇ ياكى تەڭشەكلەرنى ئۆزگەرتمەيدۇ.</string>
+    <string name="permission_denied">ئىجازەت رەت قىلىندى.ئۇنى قايتا ئىشلىتىپ ياكى ئەپ تەڭشىكىدە بەرسىڭىز بولىدۇ.</string>
+    <string name="permission_grant">ئىجازەت بېرىڭ</string>
+    <string name="permission_open_settings">ئەپ تەڭشىكىنى ئېچىڭ</string>
+
+    
+    <string name="home_subtitle_fallback">كامېرا 2 دىئاگنوز قويۇش (پەقەت ئوقۇشقىلا بولىدۇ)</string>
+    <string name="scan_title">Scanning Camera2…</string>
+    <string name="scan_status_preparing">سىكانىرلاش تەييارلىقى…</string>
+    <string name="scan_status_camera">كامېرانى تەھلىل قىلىش%1$s…</string>
+    <string name="scan_status_default">كامېرا ئالاھىدىلىكى توپلاش…</string>
+    <string name="scan_failed_title">سايىلەش مەغلۇپ بولدى</string>
+    <string name="scan_retry">قايتا سىناڭ</string>
+    <string name="rescan">قايتا سايىلەڭ</string>
+    <string name="export">ئېكسپورت</string>
+    <string name="export_success">دوكلات ئېكسپورت قىلىندى.</string>
+    <string name="export_failure">ئېكسپورت مەغلۇپ بولدى:%1$s</string>
+    <string name="export_open_failed">تاللانغان ھۆججەتنى يېزىش ئۈچۈن ئاچالمىدى.</string>
+
+    <string name="device_title">ئۈسكۈنە</string>
+    <string name="field_manufacturer">ئىشلەپچىقارغۇچى</string>
+    <string name="field_model">Model</string>
+    <string name="field_android">Android</string>
+    <string name="field_device">ئۈسكۈنە</string>
+    <string name="field_product">مەھسۇلات</string>
+    <string name="field_hardware">قاتتىق دېتال</string>
+    <string name="field_fingerprint">بارماق ئىزى</string>
+
+    <string name="summary_title">خۇلاسە</string>
+    <string name="summary_cameras">كامېرا</string>
+    <string name="summary_vendor_characteristics">ساتقۇچىلارنىڭ ئالاھىدىلىكى</string>
+    <string name="summary_vendor_capture_request">Vendor CaptureRequest</string>
+    <string name="summary_vendor_capture_result">Vendor CaptureResult</string>
+    <string name="summary_vendor_physical_request">ساتقۇچى فىزىكىلىق تەلەپ</string>
+    <string name="summary_vendor_session_keys">ساتقۇچىلار يىغىن ئاچقۇچى</string>
+    <string name="summary_totals">ئومۇمىي سانى:%1$d ئالاھىدىلىكى ·%2$d CaptureRequest ·%3$d CaptureResult ·%4$d فىزىكىلىق تەلەپ ·%5$d يىغىن</string>
+
+    <string name="cameras_title">كامېرالار (%1$d)</string>
+    <string name="cameras_empty">بۇ ئۈسكۈنە CameraManager.cameraIdList ئارقىلىق كامېرا يوقلىقىنى خەۋەر قىلدى.</string>
+    <string name="report_errors_title">يەرشارىنى تەكشۈرۈش خاتالىقى</string>
+
+    
+    <string name="camera_id">كامېرا كىملىكى%1$s</string>
+    <string name="logical_multi_camera">لوگىكىلىق كۆپ كامېرا</string>
+    <string name="physical_ids_short">فىزىكىلىق:%1$s</string>
+    <string name="stat_capture_request">CaptureRequest</string>
+    <string name="stat_capture_result">CaptureResult</string>
+    <string name="stat_physical_request">Physical Request</string>
+    <string name="stat_session">يىغىن</string>
+    <string name="vendor_count">ساتقۇچى%1$d</string>
+    <string name="badge_vendor">ساتقۇچى</string>
+
+    
+    <string name="back">قايتىش</string>
+    <string name="camera_detail_subtitle">%1$s ·%2$s</string>
+    <string name="search_placeholder">ئىزدەش كۇنۇپكىلىرى (مەسىلەن hdr)</string>
+    <string name="clear_search">ئىزدەشنى تازىلاش</string>
+    <string name="filter_vendor_only">پەقەت ساتقۇچى</string>
+    <string name="filter_all_namespaces">بارلىق ئىسىم بوشلۇقى</string>
+    <string name="keys_result_count">%1$d%2$d كۇنۇپكىلار ·%3$s</string>
+    <string name="keys_empty">نۆۋەتتىكى سۈزگۈچكە ھېچقانداق كۇنۇپكا ماس كەلمەيدۇ.</string>
+    <string name="overview_logical_multi_camera">لوگىكىلىق كۆپ كامېرا</string>
+    <string name="overview_physical_ids">فىزىكىلىق كامېرا كىملىكى</string>
+    <string name="overview_hardware_level">قاتتىق دېتال دەرىجىسى</string>
+    <string name="overview_lens_facing">لىنزا يۈزلىنىش</string>
+    <string name="overview_sensor_orientation">سېنزور يۆنىلىشى</string>
+    <string name="value_not_reported">دوكلات قىلىنمىدى</string>
+    <string name="value_none_reported">ھېچكىم دوكلات قىلمىغان</string>
+    <string name="yes">ھەئە</string>
+    <string name="no">ياق</string>
+    <string name="notes_title">ئىزاھات</string>
+    <string name="note_bullet">•%1$s</string>
+    <string name="physical_ids_associated">مۇناسىۋەتلىك فىزىكىلىق كىملىكلەر:%1$s</string>
+    <string name="physical_ids_not_reported">فىزىكىلىق كىملىك ​​بۇ كامېرا تەرىپىدىن دوكلات قىلىنمىغان</string>
+
+    
+    <string name="note_logical_multi_camera">ئۈسكۈنىنىڭ دوكلاتى REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA.</string>
+    <string name="note_physical_ids">فىزىكىلىق كامېرا كىملىكى دوكلات قىلىندى:%1$s.</string>
+    <string name="note_keys_not_reported">%1$s ھېچقانداق ئاچقۇچ قايتۇرمىدى.</string>
+    <string name="note_characteristics_unreadable">بۇ كامېرا ئۈچۈن كامېرا ئالاھىدىلىكى ئوقۇلمىدى.</string>
+
+    
+    <string name="availability_characteristics">بۇ كامېرا ئۈچۈن CameraCharacteristics دىن ئوقۇلغان قىممەت.ھەر بىر ئاچقۇچتا ئوقۇش خاتالىقى دوكلات قىلىنغان.</string>
+    <string name="availability_capture_request">ئۈسكۈنىدە ئىشلەتكىلى بولىدىغان CaptureRequest كۇنۇپكىسى سۈپىتىدە دوكلات قىلىنغان.مەۋجۇت بولۇش بۇ دېتالنىڭ ئۈنۈملۈك قىممەتنى بىلىدىغانلىقىنى ، ئاچقۇچنىڭ يازغىلى بولىدىغانلىقىنى بىلدۈرمەيدۇ.no CaptureRequest بۇ دېتال ئارقىلىق ئەۋەتىلمەيدۇ.</string>
+    <string name="availability_capture_result">ئۈسكۈنىدە بار بولغان CaptureResult ئاچقۇچى دەپ دوكلات قىلىنغان.نەتىجە سەپلىمە ئەمەس ، كامېرا تۇرۇبا يولىنىڭ نەتىجىسى.</string>
+    <string name="availability_physical_request">ئۈسكۈنىدە بار بولغان فىزىكىلىق كامېرا CaptureRequest كۇنۇپكىسى سۈپىتىدە دوكلات قىلىنغان.ئۈسكۈنە دوكلات قىلغاندا بۇ لوگىكىلىق كامېرا بىلەن مۇناسىۋەتلىك فىزىكىلىق كامېرا كىملىكىگە ماس كېلىدۇ.</string>
+    <string name="availability_session">ئۈسكۈنىنىڭ ئىشلەتكىلى بولىدىغان يىغىن ئاچقۇچى سۈپىتىدە تەمىنلەنگەن (availableSessionKeys).ھېچقانداق پروگرامما قۇرۇلمايدۇ ۋە ھېچقانداق قىممەت بۇ دېتال تەرىپىدىن ئۆزگەرتىلمەيدۇ.</string>
+
+    
+    <string name="key_detail_title">ئاچقۇچلۇق تەپسىلات</string>
+    <string name="key_not_found">بۇ كامېرانىڭ نۆۋەتتىكى دوكلاتىدا%1$s ئاچقۇچ يوق.</string>
+    <string name="copy_key_name">ئاچقۇچلۇق ئىسىمنى كۆچۈرۈڭ</string>
+    <string name="metadata_title">Metadata</string>
+    <string name="field_type">تىپ</string>
+    <string name="field_type_source">تىپى مەنبە</string>
+    <string name="field_category">سەھىپە</string>
+    <string name="field_vendor">ساتقۇچى</string>
+    <string name="field_namespace">ئىسىم بوشلۇقى</string>
+    <string name="field_camera">كامېرا</string>
+    <string name="field_origin">Origin</string>
+    <string name="availability_title">ئىشلەتكىلى بولىدۇ</string>
+    <string name="vendor_disclaimer">بۇ ئىسىم ساتقۇچىغا خاس ئاچقۇچنى كۆرسىتىدۇ.بۇ ئەپ ئۇنىڭغا مەنىلىك مەنىنى بەرمەيدۇ ھەمدە قايسى قىممەتلەرنىڭ توغرىلىقىنى بىلمەيدۇ.</string>
+    <string name="error_title">ئوقۇش كۇنۇپكىسى خاتا</string>
+    <string name="field_exception_type">مۇستەسنا تىپ</string>
+    <string name="field_message">ئۇچۇر</string>
+    <string name="value_title">قىممەت</string>
+    <string name="value_serialization">تەرتىپلەش:%1$s</string>
+    <string name="copy_value">كۆچۈرۈش قىممىتى</string>
+    <string name="value_none_for_category">بۇ تۈردە ھېچقانداق قىممەت ئاشكارىلانمايدۇ.ئاچقۇچ پەقەت ئۈسكۈنىنىڭ%1$s غىچە تەمىنلەيدىغانلىقىنى دوكلات قىلىدۇ.</string>
+    <string name="value_unreadable">بۇ ئاچقۇچ ئۈچۈن قىممەتنى ئوقۇغىلى بولمىدى.</string>
+    <string name="raw_tostring_title">Original toString ()</string>
+    <string name="copy_tostring">كۆچۈرۈش</string>
+    <string name="no_message">ھېچقانداق ئۇچۇر يوق</string>
+    <string name="key_row_error">خاتالىق:%1$s</string>
+
+    
+    <string name="clip_label_key">كامېرا 2 تەكشۈرگۈچى ئاچقۇچ</string>
+    <string name="clip_label_value">كامېرا 2 تەكشۈرگۈچىنىڭ قىممىتى</string>
+    <string name="clip_label_tostring">كامېرا 2 تەكشۈرگۈچى</string>
+
+    
+    <string name="monitor_title">يىغىن نازارەتچىسى</string>
+    <string name="monitor_open_action">يىغىن نازارەتچىسى</string>
+    <string name="monitor_limitation">بۇ كۆرسەتكۈچ TotalCaptureResult ، قىسمەن نەتىجىلەر ۋە چاقىرىش قاتارلىق بۇ دېتال تەرىپىدىن قۇرۇلغان خاتىرىلەرنى خاتىرىلەيدۇ.ئاندىرويىد ئەپنىڭ كامېرا قاتارلىق باشقا جەريانلار ئەۋەتكەن CaptureRequests نى كۆزىتىشىگە يول قويمايدۇ ، شۇڭا بۇ يەردە ھېچقانداق پاي تەلەپ قىممىتى كۆرۈنمەيدۇ.</string>
+    <string name="monitor_label_hint">مەسىلەن1X, HDR, PORTRAIT</string>
+    <string name="monitor_open_camera">كامېرانى ئېچىڭ</string>
+    <string name="monitor_close_camera">كامېرانى تاقاش</string>
+    <string name="monitor_start_recording">خاتىرىلەشنى باشلاڭ</string>
+    <string name="monitor_stop_recording">خاتىرىلەشنى توختىتىڭ</string>
+    <string name="monitor_capture">Capture still</string>
+    <string name="monitor_import_dump">ئەخلەت ساندۇقىنى ئىمپورت قىلىڭ</string>
+    <string name="monitor_imported_ids">ئىمپورت قىلىنغان ساتقۇچىلار كىملىكى:%1$d</string>
+    <string name="monitor_status">ھالەت</string>
+    <string name="monitor_frames_seen">Frames seen</string>
+    <string name="monitor_frames_recorded">Frames recorded</string>
+    <string name="monitor_captures">Captures</string>
+    <string name="monitor_vendor_request_keys">ساتقۇچى تەلەپ ئاچقۇچ ، ئاخىرقى رامكا</string>
+    <string name="monitor_vendor_result_keys">ساتقۇچى نەتىجە كۇنۇپكىسى ، ئاخىرقى رامكا</string>
+    <string name="monitor_last_frame">ئاخىرقى رامكا</string>
+    <string name="monitor_sessions">يىغىن</string>
+    <string name="monitor_no_sessions">ھازىرغىچە ھېچقانداق يىغىن خاتىرىلەنمىدى.</string>
+    <string name="monitor_session_summary">%1$s ·%2$d رامكا ·%3$d تۇتۇش</string>
+    <string name="monitor_export_json">JSON نى چىقىرىش</string>
+    <string name="monitor_export_csv">CSV نى چىقىرىش</string>
+    <string name="monitor_export_comparison">ئېكسپورت سېلىشتۇرۇش</string>
+    <string name="monitor_comparison_changes">%1$d قىممىتى vs%2$s</string>
+    <string name="monitor_comparison_none">%1$s گە قارىتا ھېچقانداق پەرق يوق.</string>
+    <string name="monitor_events">Events</string>
+    <string name="monitor_no_events">ھازىرچە ھېچقانداق ۋەقە يوق.</string>
+</resources>
