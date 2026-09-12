@@ -152,4 +152,9 @@
     <string name="monitor_comparison_none">%1$s گە قارىتا ھېچقانداق پەرق يوق.</string>
     <string name="monitor_events">Events</string>
     <string name="monitor_no_events">ھازىرچە ھېچقانداق ۋەقە يوق.</string>
-</resources>
+<string name="stat_characteristics">ئالاھىدىلىكى</string>
+    <string name="overview_title">ئومۇمىي چۈشەنچە</string>
+    <string name="field_physical_ids">مۇناسىۋەتلىك فىزىكىلىق كىملىك</string>
+    <string name="monitor_subtitle">كامېرا%1$s</string>
+    <string name="monitor_label">يىغىن بەلگىسى</string>
+    </resources>
