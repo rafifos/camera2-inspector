@@ -143,4 +143,18 @@
     <string name="monitor_comparison_none">לא נצפו הבדלים מול %1$s.</string>
     <string name="monitor_events">אירועים</string>
     <string name="monitor_no_events">עדיין אין אירועים.</string>
-</resources>
+<string name="permission_title">הרשאת מצלמה</string>
+    <string name="scan_title">סורק את מצלמה 2…</string>
+    <string name="field_android">דְמוּי אָדָם</string>
+    <string name="summary_vendor_physical_request">בקשה פיזית של ספק</string>
+    <string name="cameras_title">מצלמות (%1$d)</string>
+    <string name="logical_multi_camera">ריבוי מצלמה לוגית</string>
+    <string name="back">בְּחֲזָרָה</string>
+    <string name="camera_detail_subtitle">%1$s · %2$s</string>
+    <string name="note_physical_ids">מזהי מצלמה פיזיים שדווחו: %1$s.</string>
+    <string name="field_type">סוּג</string>
+    <string name="field_type_source">הקלד מקור</string>
+    <string name="field_category">קָטֵגוֹרִיָה</string>
+    <string name="field_namespace">מרחב שמות</string>
+    <string name="availability_title">זְמִינוּת</string>
+    </resources>

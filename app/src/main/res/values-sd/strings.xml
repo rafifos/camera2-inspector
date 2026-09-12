@@ -142,4 +142,19 @@
     <string name="monitor_comparison_none">%1$s جي خلاف ڪوبه فرق نه ڏٺو ويو.</string>
     <string name="monitor_events">واقعا</string>
     <string name="monitor_no_events">في الحال ڪوبه واقعو.</string>
-</resources>
+<string name="copy_key_name">نقل ڪريو اهم نالو</string>
+    <string name="field_category">زمرو</string>
+    <string name="field_physical_ids">لاڳاپيل جسماني IDs</string>
+    <string name="value_title">قدر</string>
+    <string name="value_none_for_category">هن درجي ۾ ڪابه قيمت ظاهر نه ڪئي وئي آهي.ڪنجي صرف اشارو ڪري ٿي ته ڊوائيس ان کي %1$s لاءِ دستياب طور رپورٽ ڪري ٿو.</string>
+    <string name="raw_tostring_title">اصل ڏانهن اسٽرنگ()</string>
+    <string name="clip_label_tostring">ڪئميرا 2 انسپيڪٽر ڏانهن اسٽرنگ</string>
+
+    
+    <string name="monitor_label_hint">مثال1X، HDR، پورٽريٽ</string>
+    <string name="monitor_stop_recording">رڪارڊنگ بند ڪريو</string>
+    <string name="monitor_capture">اڃا تائين پڪڙيو</string>
+    <string name="monitor_last_frame">آخري فريم</string>
+    <string name="monitor_sessions">سيشن</string>
+    <string name="monitor_comparison_changes">%1$d قدر تبديليون بمقابله %2$s</string>
+    </resources>

@@ -147,4 +147,13 @@
     <string name="monitor_comparison_none">קיין דיפעראַנסיז באמערקט קעגן %1$s.</string>
     <string name="monitor_events">געשעענישן</string>
     <string name="monitor_no_events">נאָך קיין געשעענישן.</string>
-</resources>
+<string name="permission_open_settings">עפֿן אַפּ סעטטינגס</string>
+
+    
+    <string name="copy_key_name">קאָפּי שליסל נאָמען</string>
+    <string name="field_type">טיפּ</string>
+    <string name="error_title">טעות לייענען שליסל</string>
+    <string name="field_message">אָנזאָג</string>
+    <string name="value_unreadable">די ווערט קען ניט זיין לייענען פֿאַר דעם שליסל.</string>
+    <string name="monitor_session_summary">%1$s · %2$d ראָמען · %3$d קאַפּטשערז</string>
+    </resources>

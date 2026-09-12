@@ -132,4 +132,29 @@
     <string name="monitor_comparison_none">هیچ تفاوتی در برابر %1$s مشاهده نشد.</string>
     <string name="monitor_events">رویدادها</string>
     <string name="monitor_no_events">هنوز هیچ رویدادی وجود ندارد.</string>
-</resources>
+<string name="app_name">بازرس دوربین 2</string>
+
+    
+    <string name="permission_grant">اجازه بدهید</string>
+    <string name="permission_open_settings">تنظیمات برنامه را باز کنید</string>
+
+    
+    <string name="home_subtitle_fallback">عیب‌یابی Camera2 (فقط خواندنی)</string>
+    <string name="field_product">محصول</string>
+    <string name="summary_vendor_capture_result">فروشنده CaptureResult</string>
+    <string name="summary_totals">مجموع: %1$d ویژگی · %2$d CaptureRequest · %3$d CaptureResult · %4$d درخواست فیزیکی · %5$d جلسه</string>
+
+    <string name="overview_title">نمای کلی</string>
+    <string name="overview_hardware_level">سطح سخت افزار</string>
+    <string name="physical_ids_not_reported">شناسه های فیزیکی توسط این دوربین گزارش نشده است</string>
+
+    
+    <string name="availability_physical_request">توسط دستگاه به عنوان کلید CaptureRequest دوربین فیزیکی موجود گزارش شده است.هنگامی که دستگاه آنها را گزارش می‌کند، برای شناسه‌های دوربین فیزیکی مرتبط با این دوربین منطقی اعمال می‌شود.</string>
+    <string name="field_type_source">منبع را تایپ کنید</string>
+    <string name="field_category">دسته بندی</string>
+    <string name="field_namespace">فضای نام</string>
+    <string name="availability_title">در دسترس بودن</string>
+    <string name="error_title">خطا در خواندن کلید</string>
+    <string name="value_none_for_category">هیچ ارزشی در این دسته نمایش داده نمی شود.کلید فقط نشان می دهد که دستگاه آن را به عنوان موجود برای %1$s گزارش می دهد.</string>
+    <string name="monitor_title">مانیتور جلسه</string>
+    </resources>

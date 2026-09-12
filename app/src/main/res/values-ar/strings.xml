@@ -141,4 +141,17 @@
     <string name="monitor_comparison_none">لم يتم ملاحظة أي فروق مقابل %1$s.</string>
     <string name="monitor_events">الأحداث</string>
     <string name="monitor_no_events">لا توجد أحداث حتى الآن.</string>
-</resources>
+<string name="notes_title">ملحوظات</string>
+    <string name="availability_capture_request">تم الإبلاغ عنه بواسطة الجهاز كمفتاح CaptureRequest متاح.لا يعني التواجد أن هذا التطبيق يعرف قيمًا صالحة، ولا يعني أن المفتاح قابل للكتابة؛لا يتم إرسال CaptureRequest بواسطة هذا التطبيق.</string>
+    <string name="availability_session">تم الإبلاغ عنه بواسطة الجهاز كمفتاح جلسة متاح (availableSessionKeys).لا يتم إنشاء أي جلسة ولا يتم تعديل أي قيمة بواسطة هذا التطبيق.</string>
+
+    
+    <string name="metadata_title">البيانات الوصفية</string>
+    <string name="field_type">يكتب</string>
+    <string name="field_category">فئة</string>
+    <string name="field_vendor">بائع</string>
+    <string name="field_origin">أصل</string>
+    <string name="raw_tostring_title">الأصل إلى سلسلة ()</string>
+    <string name="clip_label_key">مفتاح المفتش Camera2</string>
+    <string name="monitor_stop_recording">توقف عن التسجيل</string>
+    </resources>

@@ -138,4 +138,23 @@
     <string name="monitor_comparison_none">د %1$s په وړاندې هیڅ توپیر نه لیدل کیږي.</string>
     <string name="monitor_events">پیښې</string>
     <string name="monitor_no_events">تراوسه هیڅ پیښه نشته.</string>
-</resources>
+<string name="report_errors_title">د نړیوال سکین تېروتنې</string>
+
+    
+    <string name="camera_id">د کیمرې ID %1$s</string>
+    <string name="logical_multi_camera">منطقي ملټي کیمره</string>
+    <string name="stat_characteristics">ځانګړتیاوې</string>
+    <string name="stat_session">غونډه</string>
+    <string name="back">شاته</string>
+    <string name="overview_hardware_level">د هارډویر کچه</string>
+    <string name="yes">هو</string>
+    <string name="field_camera">کیمره</string>
+    <string name="field_physical_ids">اړوند فزیکي IDs</string>
+    <string name="availability_title">شتون</string>
+    <string name="copy_value">د کاپي ارزښت</string>
+    <string name="monitor_label_hint">د مثال په توګه1X، HDR، پورټریټ</string>
+    <string name="monitor_stop_recording">ثبت کول بند کړئ</string>
+    <string name="monitor_frames_seen">چوکاټونه لیدل کیږي</string>
+    <string name="monitor_vendor_result_keys">د پلورونکي پایلې کیلي، وروستی چوکاټ</string>
+    <string name="monitor_comparison_changes">د %1$d ارزښت بدلونونه د %2$s په مقابل کې</string>
+    </resources>

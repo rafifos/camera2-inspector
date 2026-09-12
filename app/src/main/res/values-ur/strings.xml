@@ -140,4 +140,20 @@
     <string name="monitor_comparison_none">%1$s کے خلاف کوئی فرق نہیں دیکھا گیا۔</string>
     <string name="monitor_events">واقعات</string>
     <string name="monitor_no_events">ابھی تک کوئی واقعات نہیں ہیں۔</string>
-</resources>
+<string name="app_name">کیمرہ 2 انسپکٹر</string>
+
+    
+    <string name="permission_title">کیمرے کی اجازت</string>
+    <string name="permission_denied">اجازت دینے سے انکار کر دیا گیا۔آپ دوبارہ کوشش کر سکتے ہیں یا ایپ کی ترتیبات میں اسے عطا کر سکتے ہیں۔</string>
+    <string name="field_hardware">ہارڈ ویئر</string>
+    <string name="note_bullet">• %1$s</string>
+    <string name="note_physical_ids">فزیکل کیمرہ IDs کی اطلاع دی گئی: %1$s۔</string>
+    <string name="availability_capture_request">ڈیوائس کے ذریعہ ایک دستیاب CaptureRequest کلید کے طور پر اطلاع دی گئی۔موجودگی کا مطلب یہ نہیں ہے کہ یہ ایپ درست اقدار کو جانتی ہے، اور نہ ہی یہ کہ کلید قابل تحریر ہے۔اس ایپ کے ذریعہ کوئی CaptureRequest نہیں بھیجی گئی ہے۔</string>
+    <string name="availability_physical_request">ڈیوائس کے ذریعہ ایک دستیاب فزیکل کیمرہ CaptureRequest کلید کے طور پر رپورٹ کیا گیا۔یہ اس منطقی کیمرے سے وابستہ فزیکل کیمرہ IDs پر لاگو ہوتا ہے، جب آلہ ان کی اطلاع دیتا ہے۔</string>
+    <string name="field_type">قسم</string>
+    <string name="field_camera">کیمرہ</string>
+    <string name="monitor_imported_ids">وینڈر ids درآمد شدہ: %1$d</string>
+    <string name="monitor_frames_recorded">فریم ریکارڈ کیے گئے۔</string>
+    <string name="monitor_vendor_result_keys">وینڈر رزلٹ کیز، آخری فریم</string>
+    <string name="monitor_export_comparison">ایکسپورٹ موازنہ</string>
+    </resources>
